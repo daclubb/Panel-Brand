@@ -118,6 +118,8 @@ body {background: black;
 	margin: 0 0 15px;
 	line-height: 29px;
 	color: #1a1a1a;
+	letter-spacing: +0.5mm;
+
 }
 
 /* !nav */
@@ -159,7 +161,8 @@ body {background: black;
 	font-size: 36px;
 	line-height: 29px;
 	color: #1a1a1a;
-	padding: 20px 62px 5px 45px;
+	padding: 20px 45px 8px 45px;
+	letter-spacing: +0.5mm;
 }
 #banner .text .description {
 	padding: 0 20px 0 44px
