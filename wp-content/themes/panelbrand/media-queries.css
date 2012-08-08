@@ -1,0 +1,66 @@
+
+@media only screen and (max-width: 480px) {
+
+}
+/*  #Mobile (Portrait) small tablet
+================================================== */
+
+@media only screen and (max-width: 767px) {
+	
+	#banner .text {top:220px;}
+	 {
+			width: 98px;
+			height: auto;
+			background-size: 100%;
+		}
+	#branding {
+	width: 150px;
+	height:auto;
+	}
+	#branding h1 a {
+		width:100px;
+		padding-top:66px;
+	}
+	#branding #tagline {
+		font-size: 25px;
+		line-height: 21px;
+		padding-top: 5px
+	}
+	.menu-item a {
+		font-size: 16px;
+		margin: 2px 0
+	}
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media screen and (min-width:768px) and (max-width:1140px) {
+	
+	#banner .text {top:220px;}
+	 {
+			width: 98px;
+			height: auto;
+			background-size: 100%;
+		}
+	#branding {
+	width: 160px;
+	height:500px;
+background-size: 100%;
+padding: 50px 10px;
+	}
+	#branding h1 a {
+		width:100px;
+		padding-top:66px;
+	}
+	#branding #tagline {
+		font-size: 25px;
+		line-height: 21px;
+		padding-top: 5px
+	}
+	.menu-item a {
+		font-size: 20px;
+		margin: 2px 0
+	}
+}
+
+
