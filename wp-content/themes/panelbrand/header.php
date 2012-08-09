@@ -49,6 +49,17 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/media-queries.css" type="text/css" media="screen" />	
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>	
+<script type="text/javascript">
+	
+	$('#banner').cycle({ 
+	    fx:      'fade', 
+	    speedIn:  1000, 
+	    speedOut: 1000,  
+    });
+
+	
+</script>	
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->

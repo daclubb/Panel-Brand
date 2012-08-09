@@ -18,8 +18,9 @@ get_header(); ?>
 			<div id="content" role="main">
 				
 			<div id="impact">
-				<div id="banner">
-			 	 <?php $recent = new WP_Query("cat=3"); while($recent->have_posts()) : $recent->the_post();?>	           		
+				<div id="banner" class="fadeslide">
+			 	 <?php $recent = new WP_Query("cat=3"); while($recent->have_posts()) : $recent->the_post();?>	   
+			 	   <div class="item">      		
 					<?php the_content(); ?>	
 					<div class="text">
 						<h3 class="title"><?php the_title(); ?></h3>
@@ -27,7 +28,7 @@ get_header(); ?>
 							<?php $bannerDesc = get_post_meta($post->ID, 'banner-description', true); echo $bannerDesc;?>
 						</p>	
 					</div>	
-								           
+				 </div>	           
 				<?php endwhile;?> 
 			 </div>	
 
