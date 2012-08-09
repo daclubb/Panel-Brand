@@ -34,17 +34,23 @@
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media screen and (min-width:768px) and (max-width:1140px) {
-	
+	#content {
+		/* width: 90%; */
+	}
+	#banner {
+		height: auto;
+	}
 	#banner .text {
-	top:300px;	 
+	top:270px;	 
 	background-size: 100%;
 	}
 	#branding {
-	width: 140px;
-	height:500px;
+	width: 130px;
+	height: 500px;
 	background-size: 100%;
 	padding: 50px 10px;
 	background-size: 100%;
+	right:0;
 	}
 	#branding h1 a {
 		width:140px;
@@ -57,7 +63,24 @@
 	}
 	.menu-item a {
 		font-size: 20px;
-		margin: 2px 0
+		margin: 2px 0;
+	}
+	#banner img {
+		width:100%!Important;
+	}
+	#banner .text {
+		width:250px;
+		height: 148px;
+	}
+	#banner .text .title  {
+		font-size: 21px;
+		line-height: 21px;
+		padding: 20px 25px 8px 25px;
+
+	}
+	#banner .text .description {
+		font-size: 80%;
+		padding: 0 20px 0 25px;
 	}
 }
 

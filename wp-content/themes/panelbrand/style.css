@@ -93,7 +93,7 @@ body {background: black;
 	font-size: 12px;
 }
 #page {width:100%;margin:0 auto;}
-.home #page {width: 100%;height: 700px;}
+.home #page {width: 100%;}
 #content {width: 86%}
 
 /* !Branding */
@@ -133,8 +133,7 @@ body {background: black;
 .menu-item a {
 	display: block;
 	font-family: "CicleFina"; 
-	font-size: 24px;
-	
+	font-size: 24px;	
 	color: #1a1a1a;
 	text-decoration: none;
 	padding-left: 12px;
@@ -143,7 +142,7 @@ body {background: black;
 .menu-item.current-menu-item a ,
 .menu-item a:hover{
 	color: #e62129;
-	background: url(images/current-arrow.png) no-repeat left 14px
+	background: url(images/current-arrow.png) no-repeat left bottom;
 }
 .menu-item a:hover {
 	color:#1a1a1a; 
@@ -152,17 +151,19 @@ body {background: black;
 /* !Impact */
 #banner {
 	width:100%;
-	height: 700px;
+	/* height: 700px; */
 	overflow: hidden;
 	position: relative;
 }
 #banner .text {
 	background: url(images/banner-text-bg.png) no-repeat;
+	background-size: 100%;
 	width:316px;
 	height: 148px;
 	position: absolute;
 	left: 0;
 	top: 450px;
+	
 }
 #banner img {
 	width:100%!Important;
