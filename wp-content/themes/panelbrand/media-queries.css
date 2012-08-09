@@ -1,7 +1,7 @@
 
 @media only screen and (max-width: 480px) {
 	#content {
-		width: 70%;
+		width: 80%;
 		
 	}
 	#branding h1 a {
@@ -24,15 +24,28 @@
 		padding: 0 20px 0 15px;
 	}
 	#banner .navslide {
-		top:300px!Important;
+		top:290px!Important;
 	}
 	#tagline {
 		display: none;
 	}
 	.menu-item a {
 		margin-bottom: 15px;
+		font-size: 17px!Important;
 	}
-
+	.menu-item a {
+		font-family: Arial;
+		line-height: 1!Important;
+	}
+	#branding h1 a {
+		width: 113px!Important;
+	}
+	/*
+#branding {
+	width: 160px!Important;
+	height: 500px;
+	}
+*/
 }
 /*  #Mobile (Portrait) small tablet
 ================================================== */
@@ -54,16 +67,16 @@
 	right:0;
 	}
 	#branding h1 a {
-		width:140px;
+		width:115px;
 		padding-top:74px;
 	}
 	#branding #tagline {
-		font-size: 25px;
+		font-size: 21px;
 		line-height: 21px;
 		padding-top: 5px
 	}
 	.menu-item a {
-		font-size: 20px;
+		font-size: 18px;
 		margin: 2px 0 10px;
 	}
 	#banner img {
@@ -119,16 +132,16 @@ padding-left: 9px;
 	right:0;
 	}
 	#branding h1 a {
-		width:140px;
+		width:115px;
 		padding-top:74px;
 	}
 	#branding #tagline {
-		font-size: 25px;
+		font-size: 21px;
 		line-height: 21px;
 		padding-top: 5px
 	}
 	.menu-item a {
-		font-size: 20px;
+		font-size: 17px;
 		margin: 2px 0 10px;
 	}
 	#banner img {
