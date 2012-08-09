@@ -94,7 +94,7 @@ body {background: black;
 }
 #page {width:100%;margin:0 auto;}
 .home #page {width: 100%;}
-#content {width: 86%}
+#content {width: 100%}
 
 /* !Branding */
 #branding {
@@ -129,6 +129,30 @@ body {background: black;
 
 }
 
+#head-foot {
+	position: absolute;
+	bottom:60px;
+	font-family: "CicleFina";
+	font-size: 13px;
+	color: black;
+	padding-left: 5px;
+}
+#lan {
+	margin: 0 5px 2px;
+}
+#lan a{
+	color: black;
+}
+#lan a.current{
+	color: red;
+}
+
+
+#copyright {
+	line-height: 1.3;
+	margin-left: 4px;
+}
+
 /* !nav */
 .menu-item a {
 	display: block;
@@ -137,7 +161,9 @@ body {background: black;
 	color: #1a1a1a;
 	text-decoration: none;
 	padding-left: 12px;
-	margin: 0 0 1px;
+	margin: 0 0 9px;
+	line-height: 0.7;
+
 }
 .menu-item.current-menu-item a ,
 .menu-item a:hover{
@@ -151,7 +177,7 @@ body {background: black;
 /* !Impact */
 #banner {
 	width:100%;
-	/* height: 700px; */
+	height: 856px;
 	overflow: hidden;
 	position: relative;
 }
@@ -164,6 +190,9 @@ body {background: black;
 	left: 0;
 	top: 450px;
 	
+}
+#banner .item {
+	width:100%!Important;
 }
 #banner img {
 	width:100%!Important;
@@ -181,3 +210,26 @@ body {background: black;
 #banner .text .description {
 	padding: 0 20px 0 44px
 }
+#banner .navslide {
+	position: absolute;
+	top: 670px;
+	left: 25px;
+	
+}
+
+#banner .navslide a {
+	text-indent: -999em;
+	background: white;
+	box-shadow: inset 0px 1px 3px rgba(0,0,0,0.5);
+	width:10px;
+	height: 10px;
+	border-radius: 16px;
+	display: block;
+	float: left;
+	margin:0 12px 0 0; 
+}
+#banner .navslide a.activeSlide  {
+	background: red;
+}
+
+

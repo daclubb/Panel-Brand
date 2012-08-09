@@ -20,14 +20,20 @@ get_header(); ?>
 			<div id="impact">
 				<div id="banner" class="fadeslide">
 			 	 <?php $recent = new WP_Query("cat=3"); while($recent->have_posts()) : $recent->the_post();?>	   
-			 	   <div class="item">      		
-					<?php the_content(); ?>	
+			 	   <div class="item">   
+			 	      		
+					<?php 
+					remove_filter( 'the_content', 'wpautop' );
+					the_content(); 
+					add_filter( 'the_content', 'wpautop' );
+					?>	
 					<div class="text">
 						<h3 class="title"><?php the_title(); ?></h3>
 						<p class="description">
 							<?php $bannerDesc = get_post_meta($post->ID, 'banner-description', true); echo $bannerDesc;?>
 						</p>	
 					</div>	
+					<div class="navslide"></div>	
 				 </div>	           
 				<?php endwhile;?> 
 			 </div>	

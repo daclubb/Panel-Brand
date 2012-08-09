@@ -57,6 +57,7 @@
 	    fx:      'fade', 
 	    speedIn:  1000, 
 	    speedOut: 1000,  
+	    pager:  '.navslide' 
     });
 
 	
@@ -97,6 +98,15 @@
 			<nav id="access" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
+				<div id="head-foot">
+					<nav id="lan">
+						<p><a class="current" href="#">EN</a> / <a href="#">TH</a>	</p>
+					</nav>				
+					<div id="copyright">
+						<p>Copyright © 2012 PANEL BRAND. </p>
+						<p>All Rights Reserved.</p>
+					</div>
+				</div>	
 	</header><!-- #branding -->
 
 
