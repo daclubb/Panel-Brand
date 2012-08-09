@@ -1,13 +1,30 @@
 
 @media only screen and (max-width: 480px) {
 	#content {
-		width: 80%;
+		width: 100%;
 		
+	}
+	#branding {
+		opacity: 0.9;
+		height: 120px!Important;
+	}
+	#branding h1 a {
+		width: 113px!Important;
 	}
 	#branding h1 a {
 		margin-top: 0;
 	}
-#banner .text {
+	#access {
+		position: absolute;
+		top:400px;
+		right: 190%;
+		width: 100%;
+	}
+	#access .menu-item a {
+	color: white!Important;
+	
+	}
+	#banner .text {
 		width:150px;
 		height: 108px;
 		display: none;
@@ -27,7 +44,7 @@
 		top:290px!Important;
 	}
 	#tagline {
-		display: none;
+		
 	}
 	.menu-item a {
 		margin-bottom: 15px;
@@ -37,16 +54,53 @@
 		font-family: Arial;
 		line-height: 1!Important;
 	}
-	#branding h1 a {
-		width: 113px!Important;
+	#head-foot {
+		border-top:1px solid #aaa;
+		top:635px!Important;
+		right: 200%!Important;
+		width: 100%!Important;
+		color: #ccc!Important;
+		padding-top: 10px;
 	}
-	/*
-#branding {
-	width: 160px!Important;
-	height: 500px;
-	}
-*/
+	#lan a {color: #aaa!Important;font-size: 20px;}
+	#lan a.current {color: #dc1c1c!Important;}
+
 }
+
+@media only screen and (max-width: 320px) { 
+	
+	#access {
+		position: absolute;
+	top: 320px!Important;
+	right: 152%!Important;
+	width: 200%!Important;
+}
+	
+	#head-foot {
+		border-top:1px solid #aaa;
+		top:550px!Important;
+		right: 200%!Important;
+		width: 100%!Important;
+		color: #ccc!Important;
+		padding-top: 10px;
+	}
+	#branding {
+		width: 65px!important;
+		height: 60px!important;
+		
+		padding: 30px 10px 10px!important;
+
+		}
+	#branding h1 a {width: 70px!Important;padding-top: 31px!important;margin:0!important;}
+	#branding #tagline {
+		font-size: 12px!important;
+		line-height: 14px!important;
+		background: none!important;
+	}
+}
+
+
+
 /*  #Mobile (Portrait) small tablet
 ================================================== */
 
