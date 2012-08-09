@@ -49,7 +49,8 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/media-queries.css" type="text/css" media="screen" />	
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>	
+<script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>
 <script type="text/javascript">
 	
 	$('#banner').cycle({ 
