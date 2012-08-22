@@ -1,0 +1,1 @@
+We are setting up our own support forum and it will take sometime. In this moment, if you have any issue or question please feel free to post it on <a href="http://themeforest.net/item/grizzly-apps-showcase/discussion/1546240" rel="no-follow" >Grizzly Forum</a> or using the <a href="http://themeforest.net/user/wegrass#from" rel="no-follow">Contact Form in our Profile Page</a>
