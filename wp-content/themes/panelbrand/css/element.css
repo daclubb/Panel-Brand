@@ -63,7 +63,8 @@ code.code::-moz-selection {
 .one_half, .one_third, .two_third, .three_fourth, .one_fourth, .two_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
     float: left;
     height: auto !important;
-    margin-right: 4%;
+    /* margin-right: 4%; */
+    margin-right: 0;
     min-height: 1px;
     position: relative;
 }
@@ -77,7 +78,8 @@ code.code::-moz-selection {
     width: 65.3%;
 }
 .one_fourth {
-    width: 22%;
+/*     width: 22%; */
+width:20%;
 }
 .two_fourth {
     width: 48%;
@@ -714,7 +716,7 @@ ul.photos-wall-list .photo-frame {
 }
 /* PHOTO FRAME */
 .photo-frame {
-	background: #FAFAFA url(../images/base-element/ajax-loader.gif) center center no-repeat;
+	background:none;
 	position: relative;
 	z-index: 100;
 	min-height: 40px;
@@ -1250,8 +1252,16 @@ footer .contact-info .fax {
 #contact-form-contact-name-h {
 	display: none;
 }
-
+/* WEBKIT EFFECT*/
+.item img:hover {
+	-webkit-filter: none;
+	-webkit-transition: ease all 0.3s;
+	}
+.grayscale {
+	-webkit-filter:grayscale(100%);
+}
 /* CONTACT FORM */
 .contact-form {
 	margin: 0 0 20px 0;
 }
+

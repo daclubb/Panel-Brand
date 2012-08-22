@@ -1,7 +1,7 @@
 <?php
 
 $config = array(
-	'title' 	=> __('App Info', 'theme_admin'),
+	'title' 	=> __('Product Detail', 'theme_admin'),
 	'group_id' 	=> 'info',
 	'context'	=> 'normal',
 	'priority' 	=> 'high',
@@ -10,49 +10,42 @@ $config = array(
 );
 $options = array(
 	
-	
+	array(
+		'type' 			=> 'text',
+		'id' 			=> 'product_code',
+		'title' 		=> __('Product code', 'theme_admin'),
+		'description' 	=> __('ใส่รหัสสินค้าที่นี่', 'theme_admin'),
+		'default' 		=> ''
+	),
 	array(
 		'type' 			=> 'textarea',
 		'id' 			=> 'short_desc',
 		'title' 		=> __('Short Description', 'theme_admin'),
-		'description' 	=> __('Recommend 100 - 120 Alphabet', 'theme_admin'),
+		'description' 	=> __('ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
 		'default' 		=> ''
 	),
+	
 	array(
 		'type' 			=> 'text',
-		'id' 			=> 'customer',
-		'title' 		=> __('Customer', 'theme_admin'),
-		'description' 	=> __('Leave it blank to disable this option.', 'theme_admin'),
+		'id' 			=> 'product_size',
+		'title' 		=> __('Size', 'theme_admin'),
+		'description' 	=> __('ใส่ขนาดเช่น 156 x 200 x 20 mm.', 'theme_admin'),
 		'default' 		=> ''
 	),
-	array(
-		'type' 			=> 'text',
-		'id' 			=> 'budget',
-		'title' 		=> __('Budget', 'theme_admin'),
-		'description' 	=> __('Leave it blank to disable this option.', 'theme_admin'),
-		'default' 		=> ''
-	),
-	array(
-		'type' 			=> 'date',
-		'id' 			=> 'create_date',
-		'title' 		=> __('Create Date', 'theme_admin'),
-		'description' 	=> __('Leave it blank to disable this option.', 'theme_admin'),
-		'default' 		=> ''
-	),
-
-	// Button #1
+/*
+		// Custom Link #1
 	array(
 		'type' 			=> 'on_off',
-		'id' 			=> 'use_button_1',
-		'toggle' 		=> 'toggle-button-1',
-		'title' 		=> __('Button #1', 'theme_admin'),
+		'id' 			=> 'use_custom_link',
+		'toggle' 		=> 'toggle-link-1',
+		'title' 		=> __('Custome link', 'theme_admin'),
 		'description' 	=> '',
-		'default' 		=> 'on'
+		'default' 		=> 'off'
 	),
 	array(
 		'type' 			=> 'text',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_link_url',
+		'toggle_group' 	=> 'toggle-link-1',
+		'id' 			=> 'link_1_link_url',
 		'title' 		=> __('Link URL', 'theme_admin'),
 		'description' 	=> '',
 		'default' 		=> ''
@@ -60,18 +53,18 @@ $options = array(
 	array(
 		'type' 			=> 'text',
 		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_text',
+		'id' 			=> 'link_1_text',
 		'title' 		=> __('Text', 'theme_admin'),
 		'description' 	=> '',
-		'default' 		=> 'Launch Project'
+		'default' 		=> 'View detail'
 	),
 	array(
 		'type' 			=> 'text',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_sub_text',
+		'toggle_group' 	=> 'toggle-link-1',
+		'id' 			=> 'link_1_sub_text',
 		'title' 		=> __('Sub Text', 'theme_admin'),
 		'description' 	=> '',
-		'default' 		=> 'view the live work'
+		'default' 		=> ''
 	),
 	array(
 		'type' 			=> 'select',
@@ -90,6 +83,7 @@ $options = array(
 			'yellow' 			=> 'Yellow',
 		),
 	),
+*/
 	
 	
 );

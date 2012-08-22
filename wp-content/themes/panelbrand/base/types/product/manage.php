@@ -7,6 +7,8 @@ function edit_product_columns( $columns ) {
 		're-order' 	=> __( 'Reoder', 'theme_admin' ),
 		'featured' 	=> __( 'Featured', 'theme_admin' ),
 		'title' 	=> __( 'Title', 'theme_admin' ),
+		'short_desc' 	=> __( 'Shor', 'theme_admin' ),		
+		'product_code' 	=> __( 'Product code', 'theme_admin' ),
 		'category' 	=> __( 'Category', 'theme_admin' ),
 		'date' 		=> __( 'Date', 'theme_admin' ),
 	);

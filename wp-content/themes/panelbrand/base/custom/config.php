@@ -88,7 +88,8 @@ $theme_config = array(
 		'blog',
 		'contact',
 		'pricing',
-		'portfolio'
+		'portfolio',
+		'product'
 	),
 	
 	// Theme Options
@@ -101,6 +102,7 @@ $theme_config = array(
 		'home' 			=> __('Home', 'theme_admin'),
 		'apps' 			=> __('Apps', 'theme_admin'),
 		'portfolio' 	=> __('Portfolio', 'theme_admin'),
+		'product' 	=> __('Portfolio', 'theme_admin'),
 		'blog' 			=> __('Blog', 'theme_admin'),
 		'advance' 		=> __('Advance', 'theme_admin'),
 	),

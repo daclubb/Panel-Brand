@@ -24,7 +24,7 @@ function register_product_custom_post_type() {
 			'capability_type' 		=> 'post',
 			'hierarchical' 			=> false,
 			'rewrite' 				=> array( 'with_front' => false, 'slug' => '/product' ),
-			'query_var' 			=> 'portfolio',
+			'query_var' 			=> 'product',
 			'_builtin' 				=> false,
 			'supports' 				=> array('title', 'editor', 'thumbnail'),
 			'show_in_menu' 			=> true,
@@ -35,7 +35,7 @@ function register_product_custom_post_type() {
 	);
 	
 	//register taxonomy for Platform
-	register_taxonomy('product_category','portfolio',array(
+	register_taxonomy('product_category','product',array(
 		'hierarchical' => false,
 		'labels' => array(
 			'name' => __( 'Product Category', 'theme_admin' ),
