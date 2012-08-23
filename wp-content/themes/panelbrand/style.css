@@ -41,6 +41,9 @@ body {
 	background: #fff;
 	line-height: 1;
 }
+p ,.content{
+	line-height: 1.2;
+}
 ol, ul {
 	list-style: none;
 }
@@ -242,13 +245,17 @@ body.blog {
 .entry-title {
 	font-family: "CicleFina"!Important; 
 	font-size: 36px;
-	background: url(images/pagetitle-bg.png) no-repeat;
+	background: url(images/pagetitle-bg.png) no-repeat right center;
 	color: white;
 	display: inline-block;
-	padding: 10px 10px 10px 22px;
-	width: 163px;
+	padding: 10px 25px 10px 15px;
 	margin: 0 0 15px;
 }
+.entry-title span{
+	background: url(images/white-clip.png) no-repeat left 80%;
+	padding-left: 10px;
+}
+
 h3 {
 	font-family: "CicleFina"!important;
 	color: #1a1a1a;
@@ -321,3 +328,35 @@ p {
 }
 
 .button {display: none;}
+.story {
+	clear: both;
+	border-bottom: #8d8d8d 1px solid;
+	border-top: #fff 1px solid ;
+	min-height: 240px;
+	padding:30px 0 ;
+	
+}
+.story1 {
+	border-top: 0;
+}
+.story .pic {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.story .pic+div {
+	overflow: hidden;
+}
+
+.readmore {
+	display: inline-block;
+	background: url(images/readmore-bg.png) no-repeat;
+	width: 65px;
+	height: 14px;
+	color: white;
+	padding: 4px;
+	margin-top:20px;
+
+}
+.readmore:hover {
+	color: black;
+}

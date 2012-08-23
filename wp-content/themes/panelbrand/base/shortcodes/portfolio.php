@@ -4,7 +4,7 @@
 add_shortcode('portfolio', 'theme_shortcode_portfolio');
 function theme_shortcode_portfolio($atts, $content = null, $code) {
 	extract(shortcode_atts(array(
-		'count' => '3',
+		'count' => '100',
 		'featured'	=> false,
 		'cats'		=> false,
 		'ids'		=> false
@@ -42,10 +42,11 @@ function theme_shortcode_portfolio($atts, $content = null, $code) {
 	$counter = 0;
 	foreach ( $portfolios as $portfolio ) {
 
-		$last = ( ++$counter % 3 == 0 ) ? 'last' : '';
-		$clear = ( $counter % 3 == 0 ) ? '<div class="clear"></div>' : '';
-
+		$last = ( ++$counter % 1 == 0 ) ? 'last' : '';
+		$clear = ( $counter % 1 == 0 ) ? '<div class="clear"></div>' : '';
+		$i++;
 		$title = $portfolio->post_title;
+		$content = $portfolio->post_content;
 		$portfolio_category = wp_get_post_terms( $portfolio->ID, 'portfolio_category', array("fields" => "names" ));
 		$link = get_permalink( $portfolio->ID );
 		
@@ -55,25 +56,20 @@ function theme_shortcode_portfolio($atts, $content = null, $code) {
 		$feature_image_url = $feature_image_url[0];
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
-		$resized_post_thumb_src = theme_get_image( $feature_image_url, 290, 125, true );
+		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
+		
+		$list .='<div class="story story'.$i.'">';
+		$list .='<a class="pic" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
+		$list .='<div class="info">';
+		$list .='<h3 class="title">'.$title.'</div>';
+		$list .='<div class="content">'.$content.'</div>';
+		$list .='<a class="readmore" href="'.$link.'">Read more.</a>';
 
-		$list .= '<div class="one_third ' . $last . '">';
-		$list .= '<div class="portfolio-frame">';
-
-		$list .= '<div class="photo-frame icon-watch">';
-		$list .= '<a href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
-		$list .= '<div class="photo-frame-shadow"></div>';
-		$list .= '</div>';
-
-		$list .= '<div class="portfolio-info">';
-		$list .= '<div class="title">'.$title.'</div>';
-		$list .= '<div class="category">'. implode( ' / ', $portfolio_category ) .'</div>';
-		$list .= '</div>';
-
+		
 		$list .= '</div>';
 		$list .= '</div>';
 
-		$list .= $clear;
+		
 	}
 	return <<<RET
 $list
