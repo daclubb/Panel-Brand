@@ -79,6 +79,24 @@
 	 */
 	wp_head();
 ?>
+<script type="text/javascript">
+		$(document).ready(function() {
+			var iwidth = $('.item').width();
+			$('.item').css({'height':iwidth+'px'});
+			var i4width = $('.item').width()*4;
+			$('.titlelist').css({'width':i4width+'px'});
+			
+			
+			$(".tilte1").hover( function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); } );
+		});
+	</script>
+<?php if(is_home()) { /*  Add .home to body  */ ?>
+ <script type="text/javascript">
+	$(document).ready(function() {
+		$('body').addClass("home ") 
+	});
+ </script>	
+<?php }?>
 </head>
 
 <body <?php body_class(); ?>>

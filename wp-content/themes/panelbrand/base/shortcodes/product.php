@@ -14,7 +14,10 @@ function theme_shortcode_product($atts, $content = null, $code) {
 	global $post;
 	$args = array(
 		'post_type' => 'product',
-		'post__not_in' => array($post->ID)
+		'post__not_in' => array($post->ID),
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
+		
 	);
 
 	// CATs
@@ -42,15 +45,17 @@ function theme_shortcode_product($atts, $content = null, $code) {
 
 	$products = get_posts( $args );
 	$list = '';
+	$titlelist = '<div class="titlelist">';
 	$counter = 0;
 	foreach ( $products as $product ) {
-
 // Get "Product Info" Meta	
 	$product_category = wp_get_post_terms($product->ID, 'portfolio_category', array("fields" => "names"));
 	$info_short_desc = get_post_meta($product->ID, 'info_short_desc', true);
 	$info_product_code = get_post_meta($product->ID, 'info_product_code', true);
 	$info_product_size = get_post_meta($product->ID, 'info_product_size', true);
 	
+	$i++;				
+					
 		$last = ( ++$counter % 4 == 0 ) ? 'last' : '';
 		$clear = ( $counter % 4 == 0 ) ? '<div class="clear"></div>' : '';
 
@@ -64,29 +69,37 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$feature_image_url = $feature_image_url[0];
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
-		$resized_post_thumb_src = theme_get_image( $feature_image_url, 241, 241, true );
-
-		$list .= '<div class="one_fourth ' . $last . '">';
+		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
+		$titlelist	.='<a href="'.$link.' class="tilte'.$i.'">'.$title.'</a>  / ';
+		$list .= '<div class="one_fourth ' . $last . ' item item'.$i.'">';
 		
 
-		$list .= '<div class="icon-watch item">';
+		$list .= '<div class="icon-watch product-img">';
 		$list .= '<a href="'.$link.'"><img class="grayscale" src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		
 		
 
-		$list .= '<div class="product-info">';
-		$list .= '<div class="title">'.$title.'</div>';
-		$list .= '<div class="short_desc">'.$info_short_desc.'</div>';
-		$list .= '<div class="short_size">'.$info_product_size.'</div>';		
-		$list .= '</div>';
+		$list .= '<div class="product-info"><div class="inner">';
+		$list .= '<p class="title">'.$title.'</p>';
+		$list .= '<p class="short_desc">'.$info_short_desc.'</p>';
+		$list .= '<p class="short_size"> size: '.$info_product_size.'</p>';		
+		$list .= '</div></div>';
 
 		$list .= '</div>';
 		$list .= '</div>';
 
 		$list .= $clear;
 	}
+	$titlelist	.='</div>';
 	return <<<RET
+$titlelist	
 $list
+
 RET;
+
 }
+?>
+
+
+
 
