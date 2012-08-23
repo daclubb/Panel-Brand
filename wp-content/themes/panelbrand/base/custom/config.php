@@ -10,7 +10,7 @@ $theme_config = array(
 	'theme_version'		=> '1.2',
 	
 	// Theme Types
-	'theme_types' => array( 'app', 'portfolio', 'slide', 'custom-sidebar','product'),
+	'theme_types' => array( 'case', 'portfolio', 'slide', 'custom-sidebar','product'),
 	
 	// Theme Custom Meta
 	'theme_custom_metas' => array( 'page' ),
@@ -81,7 +81,7 @@ $theme_config = array(
 		'elements',
 		'image',
 		'tab',
-		'apps',
+		'case',
 		'social',
 		'slides',
 		'map',
@@ -100,7 +100,7 @@ $theme_config = array(
 		'content' 		=> __('Content', 'theme_admin'),
 		'font' 			=> __('Font', 'theme_admin'),
 		'home' 			=> __('Home', 'theme_admin'),
-		'apps' 			=> __('Apps', 'theme_admin'),
+		'case' 			=> __('Apps', 'theme_admin'),
 		'portfolio' 	=> __('Portfolio', 'theme_admin'),
 		'product' 	=> __('Portfolio', 'theme_admin'),
 		'blog' 			=> __('Blog', 'theme_admin'),

@@ -345,8 +345,9 @@ p {
 	float: left;
 	margin: 0 20px 0 0;
 }
-.story .pic+div {
+.story .info {
 	overflow: hidden;
+	padding-top: 20px;
 }
 
 .readmore {

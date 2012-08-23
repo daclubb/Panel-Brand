@@ -1,44 +1,44 @@
 <?php
 
-add_action('init','register_app_custom_post_type');
-function register_app_custom_post_type() {
-	register_post_type( 'app',
+add_action('init','register_case_custom_post_type');
+function register_case_custom_post_type() {
+	register_post_type( 'case',
 		array(
 			'labels' => array(
-				'name' 					=> __( 'Apps', 'theme_admin' ),
-				'singular_name' 		=> __('App', 'theme_admin' ),
+				'name' 					=> __( 'cases', 'theme_admin' ),
+				'singular_name' 		=> __('case', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
-				'add_new_item' 			=> __('Add New App', 'theme_admin' ),
-				'edit_item' 			=> __('Edit App', 'theme_admin' ),
-				'new_item' 				=> __('New App', 'theme_admin' ),
-				'view_item' 			=> __('View App', 'theme_admin' ),
-				'search_items' 			=> __('Search Apps', 'theme_admin' ),
-				'not_found' 			=>  __('No App found', 'theme_admin' ),
-				'not_found_in_trash' 	=> __('No App found in Trash', 'theme_admin' ), 
+				'add_new_item' 			=> __('Add New case', 'theme_admin' ),
+				'edit_item' 			=> __('Edit case', 'theme_admin' ),
+				'new_item' 				=> __('New case', 'theme_admin' ),
+				'view_item' 			=> __('View case', 'theme_admin' ),
+				'search_items' 			=> __('Search case', 'theme_admin' ),
+				'not_found' 			=>  __('No case found', 'theme_admin' ),
+				'not_found_in_trash' 	=> __('No case found in Trash', 'theme_admin' ), 
 				'parent_item_colon' 	=> '',
 			),
-			'singular_label' 		=> __('App', 'theme_admin' ),
+			'singular_label' 		=> __('case', 'theme_admin' ),
 			'public' 				=> true,
 			'exclude_from_search' 	=> false,
 			'show_ui' 				=> true,
 			'capability_type' 		=> 'post',
 			'hierarchical' 			=> false,
-			'rewrite' 				=> array( 'with_front' => false, 'slug' => '/app' ),
-			'query_var' 			=> 'app',
+			'rewrite' 				=> array( 'with_front' => false, 'slug' => '/case' ),
+			'query_var' 			=> 'case',
 			'_builtin' 				=> false,
 			'supports' 				=> array('title', 'editor', 'thumbnail'),
 			'show_in_menu' 			=> true,
-			'has_archive'			=> true,
-			'menu_position'			=> 1001,
-			'menu_icon'				=> THEME_ADMIN_ASSETS_URI . '/images/admin/icons-16/game.png'
+			'has_archive'			=> false,
+			'menu_position'			=> 1002,
+			'menu_icon'				=> THEME_CUSTOM_ASSETS_URI . '/images/paper-bag-label.png'
 		)
 	);
 	
 	//register taxonomy for Platform
-	register_taxonomy('app_platform','app',array(
+	register_taxonomy('case_category','case',array(
 		'hierarchical' => false,
 		'labels' => array(
-			'name' => __( 'App Category', 'theme_admin' ),
+			'name' => __( 'case Category', 'theme_admin' ),
 			'singular_name' => __( 'Category', 'theme_admin' ),
 			'search_items' =>  __( 'Search Category', 'theme_admin' ),
 			'popular_items' => __( 'Popular Category', 'theme_admin' ),
@@ -54,12 +54,11 @@ function register_app_custom_post_type() {
 			'choose_from_most_used' => __( 'Choose from the most used Category', 'theme_admin' ),
 			'menu_name' => __( 'Category', 'theme_admin' ),
 		),
-		'public' 			=> true,
-		'show_in_nav_menus' => true,
-		'show_ui' 			=> true,
-		'show_tagcloud' 	=> false,
-		'query_var' 		=> false,
-		'rewrite'			=> array( 'slug' => 'app_category' )
+		'public' 				=> true,
+		'show_in_nav_menus' 	=> true,
+		'show_ui' 				=> true,
+		'show_tagcloud' 		=> false,
+		'query_var' 			=> false
 	));
 	
 	
@@ -80,4 +79,5 @@ function app_context_fixer() {
 }
 add_action( 'template_redirect', 'app_context_fixer' );
 */
+
 ?>

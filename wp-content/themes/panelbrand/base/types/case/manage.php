@@ -1,12 +1,11 @@
 <?php
 
-add_filter( 'manage_edit-app_columns', 'edit_app_columns' );
-function edit_app_columns( $columns ) {
+add_filter( 'manage_edit-case_columns', 'edit_case_columns' );
+function edit_case_columns( $columns ) {
 	$columns = array(
 		'cb' 		=> '<input type="checkbox" />',
 		're-order' 	=> __( 'Reoder', 'theme_admin' ),
 		'featured' 	=> __( 'Featured', 'theme_admin' ),
-		'icon' 		=> __( 'Icon', 'theme_admin' ),
 		'title' 	=> __( 'Title', 'theme_admin' ),
 		'category' 	=> __( 'Category', 'theme_admin' ),
 		'date' 		=> __( 'Date', 'theme_admin' ),
@@ -15,30 +14,23 @@ function edit_app_columns( $columns ) {
 	return $columns;
 }
 
-add_action( 'manage_posts_custom_column', 'manage_app_columns' );
-function manage_app_columns( $column ) {
+add_action( 'manage_posts_custom_column', 'manage_case_columns' );
+function manage_case_columns( $column ) {
 	global $post;
 	$icon = theme_get_attachment_src( get_post_meta($post->ID, 'info_icon', true) );
-	$featured = get_post_meta($post->ID, 'info_side_app_featured', true);
-	$platforms = wp_get_post_terms($post->ID, 'app_platform', array("fields" => "names"));
+	$featured = get_post_meta($post->ID, 'info_side_case_featured', true);
+	$category = wp_get_post_terms($post->ID, 'case_category', array("fields" => "names"));
 	
 	
-	if ( $post->post_type == "app" ) {
+	if ( $post->post_type == "case" ) {
 		switch( $column ) {
-
-			case 'icon':
-				if( $icon != '' ) {
-					$resized_icon_src = theme_get_image( $icon, 35, 35, true );
-					echo '<img src="' . $resized_icon_src. '" />';
-				}
-				break;
 			
 			case 'featured':
 				echo ( $featured == 'on' ) ? '<img src="' . THEME_ADMIN_ASSETS_URI . '/images/admin/icons-16/star.png" width="16" />' : '';
 				break;
 			
 			case 'category':
-				echo implode( ', ', $platforms );
+				echo implode( ', ', $category );
 				break;
 			
 			case 're-order':
