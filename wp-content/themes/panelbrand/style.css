@@ -338,6 +338,8 @@ p {
 }
 .story1 {
 	border-top: 0;
+	background: url(images/top-story-bg.png) repeat-x center top;
+	padding-top: 12px
 }
 .story .pic {
 	float: left;
