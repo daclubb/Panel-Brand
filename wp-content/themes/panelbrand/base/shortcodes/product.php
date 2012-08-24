@@ -71,7 +71,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
 		$titlelist	.='<a href="'.$link.' class="tilte'.$i.'">'.$title.'</a>  / ';
-		$list .= '<div class="one_fourth ' . $last . ' item item'.$i.'">';
+		$list .= '<div class="one_fourth ' . $last . ' item product-item item'.$i.'">';
 		
 
 		$list .= '<div class="icon-watch product-img">';

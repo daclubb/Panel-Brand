@@ -81,8 +81,8 @@
 ?>
 <script type="text/javascript">
 		$(document).ready(function() {
-			var iwidth = $('.item').width();
-			$('.item').css({'height':iwidth+'px'});
+			var iwidth = $('.product-item').width();
+			$('.product-item ').css({'height':iwidth+'px'});
 			var i4width = $('.item').width()*4;
 			$('.titlelist').css({'width':i4width+'px'});
 			

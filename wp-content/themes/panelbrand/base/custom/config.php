@@ -10,7 +10,7 @@ $theme_config = array(
 	'theme_version'		=> '1.2',
 	
 	// Theme Types
-	'theme_types' => array( 'case', 'portfolio', 'slide', 'custom-sidebar','product'),
+	'theme_types' => array( 'download','case', 'portfolio', 'slide', 'custom-sidebar','product'),
 	
 	// Theme Custom Meta
 	'theme_custom_metas' => array( 'page' ),
@@ -81,6 +81,7 @@ $theme_config = array(
 		'elements',
 		'image',
 		'tab',
+		'download',
 		'case',
 		'social',
 		'slides',
