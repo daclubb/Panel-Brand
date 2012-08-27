@@ -225,8 +225,16 @@ body.blog {
 	left: 25px;
 	
 }
-
-#banner .navslide a {
+.slider-wraper .navslide {
+	position: absolute;
+	bottom: 15px;
+	z-index: 9999;
+	left: 15px;
+}
+.slider-wraper {
+	position: relative;
+}
+.navslide a {
 	text-indent: -999em;
 	background: white;
 	box-shadow: inset 0px 1px 3px rgba(0,0,0,0.5);
@@ -237,7 +245,7 @@ body.blog {
 	float: left;
 	margin:0 12px 0 0; 
 }
-#banner .navslide a.activeSlide  {
+.navslide a.activeSlide  {
 	background: red;
 }
 
@@ -377,4 +385,21 @@ p {
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
 	background-image: url('images/fancybox_sprite.png');
+	
+}
+.fancybox-skin {
+	padding:0!important;
+}
+.slides img {width: auto!Important;height: auto!important}
+.slider-wraper {
+	float: left;
+	margin: 0 ;
+	padding: 0;
+	width:600px;
+	height: 450px;
+	
+}
+.text {
+	overflow: hidden;
+	padding:20px;
 }

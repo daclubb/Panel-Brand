@@ -2,6 +2,8 @@
 <?php
 
 
+
+
 // Apps List
 add_shortcode('product', 'theme_shortcode_product');
 function theme_shortcode_product($atts, $content = null, $code) {
@@ -47,7 +49,37 @@ function theme_shortcode_product($atts, $content = null, $code) {
 	$list = '';
 	$titlelist = '<div class="titlelist">';
 	$counter = 0;
+	
+	
 	foreach ( $products as $product ) {
+	
+	
+	
+	
+	$appearance_slide_images = get_post_meta($product->ID, 'appearance_slide_images', true);
+		// Get "Title & Text" Meta
+	$appearance_use_image = get_post_meta($product->ID, 'appearance_use_image', true);
+	$appearance_title_image = get_post_meta($product->ID, 'appearance_title_image', true);
+	$appearance_google_web_font_custom = get_post_meta($product->ID, 'appearance_google_web_font_custom', true);
+	
+	// Slide Option
+	$img_slide_effect = theme_options( 'portfolio', 'img_slide_effect' );
+	$img_slide_direction = theme_options( 'portfolio', 'img_slide_direction' );
+	$img_slide_pause = theme_options( 'portfolio', 'img_slide_pause' ) * 1000;
+	$img_slide_animate_speed = theme_options( 'portfolio', 'img_slide_animate_speed' ) * 1000;
+	
+	
+ 	        	  
+	        	    
+	
+	// General App Option
+	$show_qr = theme_options( 'portfolio', 'show_qr' );
+	
+	// Compute Screen W & H
+	$s_width = 600;
+	$s_height = 450;
+
+
 // Get "Product Info" Meta	
 	$product_category = wp_get_post_terms($product->ID, 'portfolio_category', array("fields" => "names"));
 	$info_short_desc = get_post_meta($product->ID, 'info_short_desc', true);
@@ -87,14 +119,30 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$list .= '</div></div></a>';
 
 		$list .= '</div>';
-		$list .= '<div id="data'.$i.'" class="data"  style="width:400px;display: none;">'.$fullcontent;
+		$list .= '<div id="data'.$i.'" class="data"  style="width:965px;height:450px;display: none;">';
+		$list .=  '<div class="slider-wraper">';
+		$list .=  '<ul class="slides-indetail">';
+	        	     
+	        	        if( is_array( $appearance_slide_images ) )
+	        	        foreach( $appearance_slide_images as $image ) { 
+	        	        	$resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
+	        	       
+	    $list .= '<li><img src="'.$resized_image_src.'" /></li>';
+	        	        }	        	       
+	    $list .= ' </ul><div class="navslide"></div>	</div>';
+	    
+	    $list .= '<div class="text">'.$fullcontent;
 		
 		$list .= '<div class="product-detail" style="border-top:1px solid #999;padding:10px 0;margin:">';
+		
+		
+		
+		
 		$list .= '<h6>Product detail</h6>';
 		$list .= '<p class="short_desc">'.$info_short_desc.'</p>';
 		$list .= '<p class="short_size"> size: '.$info_product_size.'</p>';			
 		$list .= '</div>';
-		
+		$list .= '</div>';
 		$list .= '</div>';
 		$list .= '</div>';
 

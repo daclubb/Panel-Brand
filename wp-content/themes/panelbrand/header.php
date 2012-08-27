@@ -64,6 +64,14 @@
 	    speedOut: 1000,  
 	    pager:  '.navslide' 
     });
+    
+    $(".slides-indetail").cycle({ 
+	    fx:      'fade', 
+	    speedIn:  1000, 
+	    speedOut: 1000,  
+	    pager:  '.navslide' 
+    });
+
 
 		$('.fancybox').fancybox({
 			
