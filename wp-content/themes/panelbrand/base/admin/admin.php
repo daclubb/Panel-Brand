@@ -57,7 +57,7 @@ class Theme_admin {
 	
 	function add_option_menu() {
 		// Admin theme main menu
-		$update_bubble = ( is_theme_update() ) ? '<span class="update-plugins count-1"><span class="update-count">Updates</span></span>' : '';
+		$update_bubble = ( is_theme_update() ) ? '' : '';
 		add_menu_page( THEME_NAME, THEME_NAME . $update_bubble, 'edit_theme_options', 'theme_setting', array( &$this, 'load_option_menu' ), THEME_ADMIN_ASSETS_URI . '/images/admin/icons-16/target.png', 1000 );
 		
 		// Admin theme sub menu

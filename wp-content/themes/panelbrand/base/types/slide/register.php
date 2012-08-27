@@ -28,7 +28,7 @@ function register_slide_type() {
 			'show_in_nav_menus'		=> false,
 			'supports' 				=> array(''),
 			'menu_position'			=> 1003,
-			'menu_icon'				=> THEME_CUSTOM_ASSETS_URI . '/images/icon-slide.png'
+			'menu_icon'				=> THEME_CUSTOM_ASSETS_URI . '/images/next.png'
 		)
 	);
 }

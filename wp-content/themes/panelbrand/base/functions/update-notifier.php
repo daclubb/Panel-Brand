@@ -25,7 +25,7 @@ function update_notifier_menu() {
 		$theme_data = get_theme_data(TEMPLATEPATH . '/style.css'); // Read theme current version from the style.css
 		
 		if( version_compare( $xml->latest, $theme_data['Version'], '>' ) ) { // Compare current theme version with the remote XML version
-			add_submenu_page('theme_setting', THEME_NAME. ' ' . __('Update', 'theme_admin'), __('Update', 'theme_admin') . ' <span class="update-plugins count-1"><span class="update-count">Updates ' . $xml->latest . '</span></span>', 'edit_theme_options', 'theme_update', 'update_notifier');
+			add_submenu_page('theme_setting', THEME_NAME. ' ' . __('Update', 'theme_admin'), __('Update', 'theme_admin') . ' <span style="display:none;" class="update-plugins count-1"><span style="display:none; class="update-count">Updates!s ' . $xml->latest . '</span></span>', 'edit_theme_options', 'theme_update', 'update_notifier');
 			
 		}
 	}	
@@ -43,9 +43,7 @@ function update_notifier_bar_menu() {
 		$xml = get_latest_theme_version(NOTIFIER_CACHE_INTERVAL); // Get the latest remote XML file on our server
 		$theme_data = get_theme_data(TEMPLATEPATH . '/style.css'); // Read theme current version from the style.css
 	
-		if( version_compare( $xml->latest, $theme_data['Version'], '>' ) ) { // Compare current theme version with the remote XML version
-			$wp_admin_bar->add_menu( array( 'id' => 'update_notifier', 'title' => '<span>' . NOTIFIER_THEME_NAME . ' <span id="ab-updates">Updates ' . $xml->latest . '</span></span>', 'href' => get_admin_url() . 'admin.php?page=theme_update' ) );
-		}
+
 	}
 }
 add_action( 'admin_bar_menu', 'update_notifier_bar_menu', 1000 );

@@ -72,7 +72,7 @@ class Theme {
 		define( 'THEME_VERSION', $options['theme_version'] );
 
 		define( 'THEME_URI', get_template_directory_uri() );
-		define( 'THEME_FRAMEWORK_URI', THEME_URI.'/base/' );
+		define( 'THEME_FRAMEWORK_URI', THEME_URI.'/base' );
 		
 		define( 'THEME_DIR', get_template_directory() );
 		define( 'THEME_FRAMEWORK_DIR', THEME_DIR.'/base' );

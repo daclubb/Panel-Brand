@@ -30,7 +30,7 @@ function register_download_custom_post_type() {
 			'show_in_menu' 			=> true,
 			'has_archive'			=> false,
 			'menu_position'			=> 1002,
-			'menu_icon'				=> THEME_CUSTOM_ASSETS_URI . '/images/paper-bag-label.png'
+			'menu_icon'				=> THEME_CUSTOM_ASSETS_URI . '/images/download.png'
 		)
 	);
 	
