@@ -67,8 +67,8 @@
     
     $(".slides-indetail").cycle({ 
 	    fx:      'fade', 
-	    speedIn:  1000, 
-	    speedOut: 1000,  
+	    speedIn:  500, 
+	    speedOut: 700,  
 	    pager:  '.navslide' 
     });
 
