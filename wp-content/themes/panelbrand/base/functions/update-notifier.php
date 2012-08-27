@@ -25,7 +25,7 @@ function update_notifier_menu() {
 		$theme_data = get_theme_data(TEMPLATEPATH . '/style.css'); // Read theme current version from the style.css
 		
 		if( version_compare( $xml->latest, $theme_data['Version'], '>' ) ) { // Compare current theme version with the remote XML version
-			add_submenu_page('theme_setting', THEME_NAME. ' ' . __('Update', 'theme_admin'), __('Update', 'theme_admin') . ' <span style="display:none;" class="update-plugins count-1"><span style="display:none; class="update-count">Updates!s ' . $xml->latest . '</span></span>', 'edit_theme_options', 'theme_update', 'update_notifier');
+			add_submenu_page('theme_setting', THEME_NAME. ' ' . __('Update', 'theme_admin'), __('Update', 'theme_admin') . ' <span style="display:none;" class="update-plugins count-1"><span style="display:none; class="update-count">Updates ' . $xml->latest . '</span></span>', 'edit_theme_options', 'theme_update', 'update_notifier');
 			
 		}
 	}	

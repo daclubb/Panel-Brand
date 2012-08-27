@@ -51,6 +51,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" language="Javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fancybox.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/jquery.fancybox.css" media="screen" />
+
+
+
 <script type="text/javascript">
 	
 	$('#banner').cycle({ 
@@ -60,6 +65,9 @@
 	    pager:  '.navslide' 
     });
 
+		$('.fancybox').fancybox({
+			
+		});
 	
 </script>	
 <!--[if lt IE 9]>
@@ -82,7 +90,7 @@
 <script type="text/javascript">
 		$(document).ready(function() {
 			var iwidth = $('.product-item').width();
-			$('.product-item ').css({'height':iwidth+'px'});
+			$('.item .product').css({'height':iwidth+'px'});
 			var i4width = $('.item').width()*4;
 			$('.titlelist').css({'width':i4width+'px'});
 			
@@ -100,6 +108,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>

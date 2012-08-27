@@ -1,7 +1,7 @@
 <?php
 
 $config = array(
-	'title' 	=> __('App Info', 'theme_admin'),
+	'title' 	=> __('Download Info', 'theme_admin'),
 	'group_id' 	=> 'info',
 	'context'	=> 'normal',
 	'priority' 	=> 'high',
@@ -40,57 +40,7 @@ $options = array(
 		'default' 		=> ''
 	),
 
-	// Button #1
-	array(
-		'type' 			=> 'on_off',
-		'id' 			=> 'use_button_1',
-		'toggle' 		=> 'toggle-button-1',
-		'title' 		=> __('Button #1', 'theme_admin'),
-		'description' 	=> '',
-		'default' 		=> 'on'
-	),
-	array(
-		'type' 			=> 'text',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_link_url',
-		'title' 		=> __('Link URL', 'theme_admin'),
-		'description' 	=> '',
-		'default' 		=> ''
-	),
-	array(
-		'type' 			=> 'text',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_text',
-		'title' 		=> __('Text', 'theme_admin'),
-		'description' 	=> '',
-		'default' 		=> 'Launch Project'
-	),
-	array(
-		'type' 			=> 'text',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_sub_text',
-		'title' 		=> __('Sub Text', 'theme_admin'),
-		'description' 	=> '',
-		'default' 		=> 'view the live work'
-	),
-	array(
-		'type' 			=> 'select',
-		'toggle_group' 	=> 'toggle-button-1',
-		'id' 			=> 'button_1_color',
-		'title' 		=> __('Button Color', 'theme_admin'),
-		'description' 	=> '',
-		'default' 		=> 'black',
-		'options' 		=> array(
-			'black' 			=> 'Black',
-			'blue' 				=> 'Blue',
-			'green' 			=> 'Green',
-			'magenta' 			=> 'Magenta',
-			'orange' 			=> 'Orange',
-			'red' 				=> 'Red',
-			'yellow' 			=> 'Yellow',
-		),
-	),
-	
+		
 	
 );
 

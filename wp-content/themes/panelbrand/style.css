@@ -272,7 +272,7 @@ p {
 .product-img img {
 	width:100%;
 }
-.item {
+.item .product{
 	overflow: hidden;
 	position: relative;
 	
@@ -369,4 +369,12 @@ p {
 }
 .readmore:hover {
 	color: black;
+}
+
+.fancybox-opened .fancybox-skin {
+	background: url(images/popup-bg.png) white;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background-image: url('images/fancybox_sprite.png');
 }
