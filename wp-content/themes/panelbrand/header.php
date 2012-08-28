@@ -57,8 +57,7 @@
 
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('.entry-title').append("<div class='right-corner' />");
+			
 		$('#banner').cycle({ 
 		    fx:      'fade', 
 		    speedIn:  1000, 
@@ -79,7 +78,7 @@
 		    speedOut: 700,  
 		   
 	    });
-	});
+
 	
     
     
@@ -138,6 +137,9 @@
 			
 			
 			$(".tilte1").hover( function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); } );
+			
+			$('.entry-title').append("<div class='right-corner' />");
+			
 		});
 	</script>
 <?php if(is_home()) { /*  Add .home to body  */ ?>

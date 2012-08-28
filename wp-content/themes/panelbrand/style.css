@@ -73,6 +73,9 @@ a {
 	text-decoration: none;
 }
 
+
+.afterclear { zoom:1; }
+.afterclear:after { display: block; visibility: hidden; clear: both; height: 0; content: "."; }
 /* !Font */
 @font-face {
       font-family: "Segoe UI Light";
@@ -426,3 +429,6 @@ p {
 	overflow: hidden;
 	padding:20px;
 }
+
+#page-slide  {background: url(images/top-story-bg.png) repeat-x center top;padding-top:12px;min-height: 300px;}
+#page-slide img {width: 100%!Important;}

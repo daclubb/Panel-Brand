@@ -7,27 +7,31 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
+<?php 	$appearance_slide_images = get_post_meta($post->ID, 'general_slide_image_s', true); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><span><?php the_title(); ?></span></h1>
 	</header><!-- .entry-header -->
+		<div id="page-slide" class="pageslide afterclear">
+				<style type="text/css" media="screen">
+					
+				</style>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php 	$appearance_slide_images = get_post_meta($post->ID, 'general_slide_image_s', true); ?>
-		
-		 <div id="page-slide" class="pageslide">
-	        	       <ul>
+	        	       <ul style="width:100%">
 	        	        <?php 
 	        	        if( is_array( $appearance_slide_images ) )
 	        	        foreach( $appearance_slide_images as $image ) : 
-	        	        	$resized_image_src = theme_get_image( $image, 960, 240, true );
+	        	        	$resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
 	        	        ?>
-	        	        	<li class=""><img src="<?php echo $resized_image_src; ?>" /></li>
+	        	        	<li style="width:100%"><img src="<?php echo $resized_image_src; ?>" /></li>
 	        	        <?php endforeach; ?>
 	        	       </ul> 
-	        	    </div>
+	     </div>
+	<div class="entry-content">
+		
+		<?php the_content(); ?>
+		
+		 
 		
 	</div><!-- .entry-content -->
 		
