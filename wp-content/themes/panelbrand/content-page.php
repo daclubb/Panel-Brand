@@ -12,7 +12,8 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><span><?php the_title(); ?></span></h1>
 	</header><!-- .entry-header -->
-		<div id="page-slide" class="pageslide afterclear">
+	<?php if($appearance_slide_images) {	?>
+	<div id="page-slide" class="pageslide afterclear">
 				<style type="text/css" media="screen">
 					
 				</style>
@@ -27,6 +28,7 @@
 	        	        <?php endforeach; ?>
 	        	       </ul> 
 	     </div>
+	   <?php }?>
 	<div class="entry-content">
 		
 		<?php the_content(); ?>
