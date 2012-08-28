@@ -74,7 +74,13 @@
 
 
 		$('.fancybox').fancybox({
-			
+			 helpers:  {
+		        overlay : {
+			            css : {
+			                'background' : 'rgba(0, 0, 0, 0.8)'
+		                }
+		              }            
+		     }
 		});
 	
 </script>	
