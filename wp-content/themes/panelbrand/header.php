@@ -57,20 +57,23 @@
 
 
 <script type="text/javascript">
+	$(document).ready(function() {
+		$('.entry-title').append("<div class='right-corner' />");
+		$('#banner').cycle({ 
+		    fx:      'fade', 
+		    speedIn:  1000, 
+		    speedOut: 1000,  
+		    pager:  '.navslide' 
+	    });
+	    
+	    $(".slides-indetail").cycle({ 
+		    fx:      'fade', 
+		    speedIn:  500, 
+		    speedOut: 700,  
+		    pager:  '.navslide' 
+	    });
+	});
 	
-	$('#banner').cycle({ 
-	    fx:      'fade', 
-	    speedIn:  1000, 
-	    speedOut: 1000,  
-	    pager:  '.navslide' 
-    });
-    
-    $(".slides-indetail").cycle({ 
-	    fx:      'fade', 
-	    speedIn:  500, 
-	    speedOut: 700,  
-	    pager:  '.navslide' 
-    });
     
     
 /*
