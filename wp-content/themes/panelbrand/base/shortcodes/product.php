@@ -47,7 +47,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 
 	$products = get_posts( $args );
 	$list = '';
-	$titlelist = '<div class="titlelist">';
+	$titlelist = '<div class="titlelist titlelist-p">';
 	$counter = 0;
 	
 	

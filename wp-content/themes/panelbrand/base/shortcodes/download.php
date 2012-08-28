@@ -39,7 +39,7 @@ function theme_shortcode_download($atts, $content = null, $code) {
 
 	$downloads = get_posts( $args );
 	$list = '';
-	$titlelist = '<div class="titlelist">';
+	$titlelist = '<div class="titlelist titlelist-d">';
 	$counter = 0;
 	foreach ( $downloads as $download ) {
 

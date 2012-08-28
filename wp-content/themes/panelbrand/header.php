@@ -72,6 +72,13 @@
 		    speedOut: 700,  
 		    pager:  '.navslide' 
 	    });
+	    
+	    $(".pageslide ul").cycle({ 
+		    fx:      'fade', 
+		    speedIn:  500, 
+		    speedOut: 700,  
+		   
+	    });
 	});
 	
     
@@ -123,10 +130,11 @@
 		$(document).ready(function() {
 			var iwidth = $('.product-item').width();
 			$('.item .product').css({'height':iwidth+'px'});
-			var i4width = $('.item').width()*4;
-			$('.titlelist').css({'width':i4width+'px'});
-			var idownwidth = $('.download-item').width()*2;
-			$('.titlelist').css({'width':idownwidth+'px'});
+			var i4width = $('.product-item').width()*4;
+			$('.titlelist-p').css({'width':i4width+'px'});
+			
+			var i2width = $('.download-item').width()*2;
+			$('.titlelist-d').css({'width':i2width+'px'});
 			
 			
 			$(".tilte1").hover( function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); } );

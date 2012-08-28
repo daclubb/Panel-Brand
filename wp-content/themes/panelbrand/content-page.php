@@ -15,6 +15,19 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php 	$appearance_slide_images = get_post_meta($post->ID, 'general_slide_image_s', true); ?>
+		
+		 <div id="page-slide" class="pageslide">
+	        	       <ul>
+	        	        <?php 
+	        	        if( is_array( $appearance_slide_images ) )
+	        	        foreach( $appearance_slide_images as $image ) : 
+	        	        	$resized_image_src = theme_get_image( $image, 960, 240, true );
+	        	        ?>
+	        	        	<li class=""><img src="<?php echo $resized_image_src; ?>" /></li>
+	        	        <?php endforeach; ?>
+	        	       </ul> 
+	        	    </div>
 		
 	</div><!-- .entry-content -->
 		
