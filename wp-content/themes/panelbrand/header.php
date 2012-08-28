@@ -133,7 +133,8 @@
 <?php if(is_home()) { /*  Add .home to body  */ ?>
  <script type="text/javascript">
 	$(document).ready(function() {
-		$('body').addClass("home ") 
+		$('body').addClass("home ") ;
+		
 	});
  </script>	
 <?php }?>
@@ -142,7 +143,7 @@
 <body <?php body_class(); ?>>
 
 
-<div id="page" class="hfeed">
+<div id="page" class="hfeed <?php echo get_post_type(); ?>">
 	<header id="branding" role="banner">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>

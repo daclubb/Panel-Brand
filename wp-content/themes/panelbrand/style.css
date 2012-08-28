@@ -104,6 +104,14 @@ body.blog {
 
 #content {width: 80%;padding:20px 40px 0 20px}
 .home #content {padding: 0;width:100%;}
+.alignright {
+	float: right;
+	margin-left: 15px;
+}
+.alignleft{
+	float: left;
+	margin-right: 15px;
+}
 /* !Branding */
 #branding {
 	/* float: right; */
@@ -173,6 +181,12 @@ body.blog {
 	line-height: 0.7;
 
 }
+/*bytype*/
+.product #menu-item-175 a,
+.portfolio #menu-item-206 a,
+.case #menu-item-207 a,
+.download #menu-item-211 a,
+
 .menu-item.current-menu-item a ,
 .menu-item a:hover{
 	color: #e62129;
