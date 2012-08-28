@@ -71,6 +71,20 @@
 	    speedOut: 700,  
 	    pager:  '.navslide' 
     });
+    
+    
+/*
+    $(function() {
+    $('.slides-indetail').each(function(i) {
+        $(this).before('<div class="imgSelect imgSelect'+i+'">').cycle({
+            fx:     'fade',
+            speed:  'fast',
+            timeout: 2000,
+            pager:  '.imgSelect' + i
+            });
+        });
+    });
+*/
 
 
 		$('.fancybox').fancybox({
@@ -79,8 +93,9 @@
 			            css : {
 			                'background' : 'rgba(0, 0, 0, 0.8)'
 		                }
-		              }            
+		              }     
 		     }
+		     
 		});
 	
 </script>	

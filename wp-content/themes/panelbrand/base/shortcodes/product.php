@@ -122,15 +122,20 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$list .= '<div id="data'.$i.'" class="data"  style="width:965px;height:450px;display: none;">';
 		$list .=  '<div class="slider-wraper">';
 		$list .=  '<ul class="slides-indetail">';
-	        	     
-	        	        if( is_array( $appearance_slide_images ) )
-	        	        foreach( $appearance_slide_images as $image ) { 
-	        	        	$resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
-	        	       
-	    $list .= '<li><img src="'.$resized_image_src.'" /></li>';
-	        	        }	        	       
-	    $list .= ' </ul><div class="navslide"></div>	</div>';
+
+		 if( is_array( $appearance_slide_images ) )
+	        	        foreach( $appearance_slide_images as $image ) {
+	        	        	        	        	$resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
+	     $list .= '<img src='.$resized_image_src.' />';   	
+	       
+	     } 
+	     
+	    $list .= '</ul>';
 	    
+		
+		
+		$list .= '</div>';
+		
 	    $list .= '<div class="text">'.$fullcontent;
 		
 		$list .= '<div class="product-detail" style="border-top:1px solid #999;padding:10px 0;margin:">';
