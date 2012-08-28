@@ -125,6 +125,8 @@
 			$('.item .product').css({'height':iwidth+'px'});
 			var i4width = $('.item').width()*4;
 			$('.titlelist').css({'width':i4width+'px'});
+			var idownwidth = $('.download-item').width()*2;
+			$('.titlelist').css({'width':idownwidth+'px'});
 			
 			
 			$(".tilte1").hover( function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); } );

@@ -59,7 +59,7 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
 		$titlelist	.='<a href="'.$link.' class="tilte'.$i.'">'.$title.'</a>  / ';
-		$list .='<div class="item download download'.$i.'">';
+		$list .='<div class="item download-item download-item'.$i.'">';
 		$list .='<a class="pic grayscale" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		$list .='<div class="info">';
 		$list .='<h3 class="title">'.$title.'</div>';
