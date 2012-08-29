@@ -173,7 +173,7 @@
 			</nav><!-- #access -->
 				<div id="head-foot">
 					<nav id="lan">
-						<p><a class="current" href="#">EN</a> / <a href="#">TH</a>	</p>
+						<p><a class="current" href="#">TH</a> / <a href="#">EN</a>	</p>
 					</nav>				
 					<div id="copyright">
 						<p>Copyright © 2012 PANEL BRAND. </p>

@@ -245,12 +245,23 @@ body.blog {
 }
 #banner .text .title {
 	font-family: "DBHelvethaicaXThin"!Important; 
+	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
 	font-size: 50px;
 	line-height: 39px;
 	color: #1a1a1a;
 	padding: 0 45px;
 	margin: 0 0 5px;
 /* 	letter-spacing: +0.5mm; */
+}
+
+.en #banner .text .title{
+	font-family: "CicleSemi"; 
+	font-size: 36px;
+	line-height: 29px;
+	padding: 20px 45px 8px 45px;
+	letter-spacing: +0.5mm;
+
+
 }
 #banner .text .description {
 	padding: 0 20px 0 44px
@@ -295,6 +306,14 @@ body.blog {
 	padding: 3px 15px;
 	margin: 0 0 15px;
 	position: relative;
+	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
+}
+
+.en .entry-title {
+	font-family: "CicleFina"!Important; 
+	font-size: 36px;
+	padding: 10px 15px;
+
 }
 .entry-title .right-corner {
 	background: url(images/right-title.png) no-repeat right center;
@@ -313,12 +332,26 @@ body.blog {
 	color: #1a1a1a;
 	margin: 5px;
 	font-size: 45px!Important;
+	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
+}
+.en .entry-content h2,.en .entry-content h3 {
+	font-family: "CicleFina"!important;
+	}
+.en .entry-content h2 {
+	font-size: 36px!Important;
+}
+.en .entry-content h2 {
+	font-size: 33px!Important;
 }
 .entry-content h3 {
 	font-family: "DBHelvethaicaXThin"!important;
 	color: #1a1a1a;
 	margin: 0px;
 	font-size: 40px!Important;
+	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
+}
+.entry-content p {
+	margin: 0 5px 10px
 }
 p {
 	margin: 0 0 10px
@@ -336,6 +369,7 @@ p {
 	position: relative;
 	
 }
+
 .item .product-info {
 	position: absolute;
 	bottom: -100%;
@@ -361,6 +395,12 @@ p {
 	font-size: 18px;
 	font-family: "DBHelvethaicaXThin"!important;
 	
+}
+
+.en .product-info .title{
+	font-size: 18px;	
+	font-family: "CicleFina"!important;
+
 }
 .product-info p {
 	padding:0 0 2px;
