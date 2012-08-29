@@ -78,11 +78,26 @@ a {
 .afterclear:after { display: block; visibility: hidden; clear: both; height: 0; content: "."; }
 /* !Font */
 @font-face {
+/* 	Thai */
+
+	/*
+
+	font-family: "DBHelvethaicaXThinExt";
+      src: url("font/DBHelvethaicaX/ThinExt.ttf"); 
+*/
+      
+	font-family: "DBHelvethaicaXThin";
+      src: url("font/DBHelvethaicaX/Thin.ttf"); 
+
+     /*
+ font-family: "DBHelvethaicaXRegular";
+      src: url("font/DBHelvethaicaX/Regular.ttf"); 
+*/
+
+/* Eng 
       font-family: "Segoe UI Light";
       src: url("font/Segoe-UI-Light.ttf"); 
-      
-        
-           
+                 
       font-family: "DB Helvethaica";
       src: url("font/DB-Helvethaica-X.ttf");  
       
@@ -90,7 +105,10 @@ a {
       src: url("font/Cicle_Fina.ttf");
       
        font-family: "CicleSemi";
-      src: url("font/Cicle_Semi.ttf");   
+      src: url("font/Cicle_Semi.ttf");  
+*/
+       
+      
     }
     
 /* !Structure -----*/
@@ -226,12 +244,13 @@ body.blog {
 	
 }
 #banner .text .title {
-	font-family: "CicleSemi"; 
-	font-size: 36px;
-	line-height: 29px;
+	font-family: "DBHelvethaicaXThin"!Important; 
+	font-size: 50px;
+	line-height: 39px;
 	color: #1a1a1a;
-	padding: 20px 45px 8px 45px;
-	letter-spacing: +0.5mm;
+	padding: 0 45px;
+	margin: 0 0 5px;
+/* 	letter-spacing: +0.5mm; */
 }
 #banner .text .description {
 	padding: 0 20px 0 44px

@@ -27,6 +27,7 @@
 	        	        	<li style="width:100%"><img src="<?php echo $resized_image_src; ?>" /></li>
 	        	        <?php endforeach; ?>
 	        	       </ul> 
+	        	       <div class="navslide"></div>
 	     </div>
 	   <?php }?>
 	<div class="entry-content">
