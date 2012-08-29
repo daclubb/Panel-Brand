@@ -236,7 +236,7 @@ body.blog {
 }
 #banner .item {
 	width:100%!Important;
-	height: auto!Important;
+	height: auto!Important; 
 }
 #banner img {
 	width:100%!Important;
@@ -287,12 +287,12 @@ body.blog {
 
 /* !Page  -----*/
 .entry-title {
-	font-family: "CicleFina"!Important; 
-	font-size: 36px;
+	font-family: "DBHelvethaicaXThin"!Important; 
+	font-size: 50px;
 	background: url(images/pagetitle-bg.png) repeat right center;
 	color: white;
 	display: inline-block;
-	padding: 10px 15px;
+	padding: 3px 15px;
 	margin: 0 0 15px;
 	position: relative;
 }
@@ -308,11 +308,17 @@ body.blog {
 	background: url(images/white-clip.png) no-repeat left 80%;
 	padding-left: 10px;
 }
-
-h3 {
-	font-family: "CicleFina"!important;
+.entry-content h2 {
+	font-family: "DBHelvethaicaXThin"!important;
 	color: #1a1a1a;
-	margin: 0 0 10px;
+	margin: 5px;
+	font-size: 45px!Important;
+}
+.entry-content h3 {
+	font-family: "DBHelvethaicaXThin"!important;
+	color: #1a1a1a;
+	margin: 0px;
+	font-size: 40px!Important;
 }
 p {
 	margin: 0 0 10px
@@ -353,7 +359,7 @@ p {
 }
 .product-info .title {
 	font-size: 18px;
-	font-family: "CicleFina"!important;
+	font-family: "DBHelvethaicaXThin"!important;
 	
 }
 .product-info p {
