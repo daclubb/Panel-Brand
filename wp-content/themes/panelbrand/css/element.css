@@ -62,16 +62,18 @@ code.code::-moz-selection {
 -------------------------------------*/
 .one_half, .one_third, .two_third, .three_fourth, .one_fourth, .two_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
     float: left;
-       /* margin-right: 4%; */
-    margin-right: 0;
+       margin-right: 4%;
+    
     min-height: 1px;
    /*  position: relative; */
 }
+.one_fourth {margin-right: 0;}
 .one_half {
     width: 48%;
 }
 .one_third {
     width: 30.6%;
+   
 }
 .two_third {
     width: 65.3%;

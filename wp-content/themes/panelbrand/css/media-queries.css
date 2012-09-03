@@ -72,7 +72,7 @@
 	#access {
 		position: absolute;
 	top: 320px!Important;
-	right: 152%!Important;
+	right: 100%!Important;
 	width: 200%!Important;
 }
 	
@@ -116,7 +116,7 @@
 	width: 130px;
 	height: 500px;
 	background-size: 100%;
-	padding: 50px 10px;
+	padding: 50px 15px 529px 22px!important;
 	background-size: 100%;
 	right:0;
 	}
@@ -125,7 +125,7 @@
 		padding-top:74px;
 	}
 	#branding #tagline {
-		font-size: 21px;
+		font-size: 35px;
 		line-height: 21px;
 		padding-top: 5px
 	}
@@ -190,7 +190,7 @@ padding-left: 9px;
 		padding-top:74px;
 	}
 	#branding #tagline {
-		font-size: 21px;
+		font-size: 45px; 
 		line-height: 21px;
 		padding-top: 5px
 	}
@@ -216,12 +216,29 @@ padding-left: 9px;
 		padding: 0 20px 0 25px;
 	}
 	#head-foot {
-position: absolute;
-bottom: 173px;
-font-family: "CicleFina";
-font-size: 8px;
-color: black;
-padding-left: 9px;
+		position: absolute;
+		bottom: 173px;
+		font-family: "CicleFina";
+		font-size: 8px;
+		color: black;
+		padding-left: 9px;
+}
+.entry-content>p,
+.entry-content>h1,
+.entry-content>h2,
+.entry-content>h3,
+.entry-content>h4,
+.entry-content>h5 {
+	width:80%;
+}
+.story {
+	width:80%;
+}
+.alignleft,.alignright {
+	float:none!important;
+}
+.story .pic,.download-item .pic {
+	float:none!important;
 }
 }
 
