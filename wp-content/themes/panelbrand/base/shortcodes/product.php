@@ -103,7 +103,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
-		$titlelist	.='<a href="'.$link.' class="tilte'.$i.'">'.$title.'</a>  / ';
+		$titlelist	.='<a href="'.$link.'" class="tilte'.$i.'">'.$title.'</a>  / ';
 		$list .= '<div class="one_fourth ' . $last . ' item product-item item'.$i.'">';
 		
 
