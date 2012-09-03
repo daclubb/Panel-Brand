@@ -14,7 +14,8 @@
 	#branding h1 a {
 		margin-top: 0;
 	}
-	#access {
+	/*
+#access {
 		position: absolute;
 		top:400px;
 		right: 190%;
@@ -22,6 +23,11 @@
 	}
 	#access .menu-item a {
 	color: white!Important;
+	
+	}
+*/
+#access .menu-item a {
+	font-size: 12px!Important;
 	
 	}
 	#banner .text {
@@ -69,12 +75,14 @@
 
 @media only screen and (max-width: 320px) { 
 	
-	#access {
+	/*
+#access {
 		position: absolute;
 	top: 320px!Important;
 	right: 100%!Important;
 	width: 200%!Important;
 }
+*/
 	
 	#head-foot {
 		border-top:1px solid #aaa;

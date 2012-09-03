@@ -488,6 +488,7 @@ p {
 	margin-right:1%;
 	margin-bottom: 20px;
 	float: left;
+	min-height: 290px;
 }
 .story .pic ,.download-item .pic{
 	float: left;
