@@ -139,6 +139,7 @@
 			$(".tilte1").hover( function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); } );
 			
 			$('.entry-title').append("<div class='right-corner' />");
+			$('.tilte4').after("<br />")
 			
 		});
 	</script>

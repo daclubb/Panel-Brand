@@ -136,7 +136,7 @@ body.blog {
 /* !Branding */
 #branding {
 	/* float: right; */
-	position: absolute;
+	position: fixed;
 	right:0;
 	z-index: 999;
 	padding:50px 15px 50px 22px;
@@ -546,4 +546,9 @@ p {
 
 .entry-content>p {
 	width:60%;
+}
+
+.tilte5 {
+
+
 }

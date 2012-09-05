@@ -42,10 +42,10 @@ function theme_shortcode_download($atts, $content = null, $code) {
 	$titlelist = '<div class="titlelist titlelist-d">';
 	$counter = 0;
 	foreach ( $downloads as $download ) {
-
+		$i++;
 		$last = ( ++$counter % 2 == 0 ) ? 'last' : '';
 		$clear = ( $counter % 2 == 0 ) ? '<div class="clear"></div>' : '';
-		$i++;
+		
 		$title = $download->post_title;
 		$content = $download->post_content;
 		$download_category = wp_get_post_terms( $download->ID, 'download_category', array("fields" => "names" ));
@@ -58,7 +58,7 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
-		$titlelist	.='<a href="'.$link.'" class="tilte'.$i.'">'.$title.'</a>  / ';
+		$titlelist	.='<span class="tilte'.$i.'"> <a href="#data'.$i.'" class="fancybox ">'.$title.'</a>   / </span>';
 		$list .='<div class="item download-item download-item'.$i.'">';
 		$list .='<a class="pic grayscale" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		$list .='<div class="info">';
@@ -70,7 +70,7 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		$list .= '</div>';
 		
 
-
+		$list .= $clear;
 		
 	}
 	$titlelist	.='</div>';

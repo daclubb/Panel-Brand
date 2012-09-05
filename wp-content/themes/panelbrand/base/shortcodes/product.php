@@ -90,7 +90,8 @@ function theme_shortcode_product($atts, $content = null, $code) {
 					
 		$last = ( ++$counter % 4 == 0 ) ? 'last' : '';
 		$clear = ( $counter % 4 == 0 ) ? '<div class="clear"></div>' : '';
-
+		
+	
 		$title = $product->post_title;
 		$fullcontent = $product->post_content;
 		$product_category = wp_get_post_terms( $product->ID, 'product_category', array("fields" => "names" ));
@@ -103,7 +104,8 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
-		$titlelist	.='<a href="'.$link.'" class="tilte'.$i.'">'.$title.'</a>  / ';
+		$titlelist	.='<span class="tilte'.$i.'"> <a href="#data'.$i.'" class="fancybox ">'.$title.'</a>   / </span>';
+		
 		$list .= '<div class="one_fourth ' . $last . ' item product-item item'.$i.'">';
 		
 
