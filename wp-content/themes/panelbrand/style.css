@@ -393,7 +393,8 @@ color: #3b3b3b;
 
 .entry-content p {
 	margin: 0 5px 10px;
-	font-size: 13px;
+	font-size: 15px;
+	color: #555;
 }
 p {
 	margin: 0 0 10px
