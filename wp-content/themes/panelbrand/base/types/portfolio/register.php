@@ -5,7 +5,7 @@ function register_portfolio_custom_post_type() {
 	register_post_type( 'portfolio',
 		array(
 			'labels' => array(
-				'name' 					=> __( 'Portfolios', 'theme_admin' ),
+				'name' 					=> __( 'PORTFOLIO', 'theme_admin' ),
 				'singular_name' 		=> __('Portfolio', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New Portfolio', 'theme_admin' ),

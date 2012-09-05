@@ -5,8 +5,8 @@ function register_case_custom_post_type() {
 	register_post_type( 'case',
 		array(
 			'labels' => array(
-				'name' 					=> __( 'cases', 'theme_admin' ),
-				'singular_name' 		=> __('case', 'theme_admin' ),
+				'name' 					=> __( 'CASE STUDIES', 'theme_admin' ),
+				'singular_name' 		=> __('Case', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New case', 'theme_admin' ),
 				'edit_item' 			=> __('Edit case', 'theme_admin' ),

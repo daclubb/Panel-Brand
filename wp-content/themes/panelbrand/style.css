@@ -396,12 +396,13 @@ color: #3b3b3b;
 	font-size: 15px;
 	color: #555;
 }
+
 p {
 	margin: 0 0 10px
 }
 .entry-content {
-	color:#777;
-	font-size: 12px;
+	font-size: 14px;
+	color: #555;
 }
 
 .product-img img {
@@ -417,13 +418,16 @@ p {
 	position: absolute;
 	bottom: -100%;
 	background: red;
-	color: white;
+	color: white!important;
 	opacity:  0;
 	width:100%;
 	-webkit-transition:all 0.4s linear;
 	-moz-transition:all 0.4s linear;
 	transition:all 0.4s linear;
 	
+}
+.item .product-info p {
+	color: white!important;
 }
 .item:hover .product-info ,
 .item.hover .product-info{

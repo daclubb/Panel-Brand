@@ -5,7 +5,7 @@ function register_download_custom_post_type() {
 	register_post_type( 'download',
 		array(
 			'labels' => array(
-				'name' 					=> __( 'downloads', 'theme_admin' ),
+				'name' 					=> __( 'DOWNLOAD', 'theme_admin' ),
 				'singular_name' 		=> __('download', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New download', 'theme_admin' ),

@@ -5,7 +5,7 @@ function register_product_custom_post_type() {
 	register_post_type( 'product',
 		array(
 			'labels' => array(
-				'name' 					=> __( 'Products', 'theme_admin' ),
+				'name' 					=> __( 'PRODUCT', 'theme_admin' ),
 				'singular_name' 		=> __('Product', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New Product', 'theme_admin' ),
