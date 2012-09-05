@@ -21,7 +21,15 @@ $options = array(
 		'type' 			=> 'textarea',
 		'id' 			=> 'short_desc',
 		'title' 		=> __('Short Description', 'theme_admin'),
-		'description' 	=> __('ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
+		'description' 	=> __('คำอธิบายสั้นๆ แสดงเมื่อ Mouse over รูป Product ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
+		'default' 		=> ''
+	),
+	
+	array(
+		'type' 			=> 'textarea',
+		'id' 			=> 'popup_short_desc',
+		'title' 		=> __('Popup Short Description', 'theme_admin'),
+		'description' 	=> __('แสดงเมื่อ Product Popup ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
 		'default' 		=> ''
 	),
 	
@@ -29,7 +37,7 @@ $options = array(
 		'type' 			=> 'text',
 		'id' 			=> 'product_size',
 		'title' 		=> __('Size', 'theme_admin'),
-		'description' 	=> __('ใส่ขนาดเช่น 156 x 200 x 20 mm.', 'theme_admin'),
+		'description' 	=> __('ใส่ขนาดสินค้าเช่น 156 x 200 x 20 mm.', 'theme_admin'),
 		'default' 		=> ''
 	),
 /*
