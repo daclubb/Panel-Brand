@@ -83,7 +83,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 // Get "Product Info" Meta	
 	$product_category = wp_get_post_terms($product->ID, 'portfolio_category', array("fields" => "names"));
 	$info_short_desc = get_post_meta($product->ID, 'info_short_desc', true);
-	$info_popup_short_desc = get_post_meta($product->ID, 'info_popup_short_desc', true);
+	$info_dl = get_post_meta($product->ID, 'info_dl', true);
 	$info_product_code = get_post_meta($product->ID, 'info_product_code', true);
 	$info_product_size = get_post_meta($product->ID, 'info_product_size', true);
 	
@@ -142,18 +142,9 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$list .= '</div>';
 		
 	    $list .= '<div class="text">'.$fullcontent;
-		
-		$list .= '<div class="product-detail" style="border-top:1px solid #999;padding:10px 0;margin:">';
-		
-		
-		
-		
-		$list .= '<h6>Product detail</h6>';
-		$list .= '<p class="short_desc">'.$info_popup_short_desc.'</p>';
-		if($info_product_size) {
-		$list .= '<p class="short_size"> size: '.$info_product_size.'</p>';	
-		}		
-		$list .= '</div>';
+		if($info_dl) {
+		 $list .= '<a href="'.$info_dl.'" target="_blank" class="readmore">Detail</a>';
+		}
 		$list .= '</div>';
 		$list .= '</div>';
 		$list .= '</div>';

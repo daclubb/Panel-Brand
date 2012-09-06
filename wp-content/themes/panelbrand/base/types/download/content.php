@@ -18,13 +18,23 @@ $options = array(
 		'description' 	=> __('Recommend 100 - 120 Alphabet', 'theme_admin'),
 		'default' 		=> ''
 	),
-	array(
+	/*
+array(
 		'type' 			=> 'text',
 		'id' 			=> 'customer',
 		'title' 		=> __('Customer', 'theme_admin'),
 		'description' 	=> __('Leave it blank to disable this option.', 'theme_admin'),
 		'default' 		=> ''
 	),
+*/
+	array(
+		'type' 			=> 'textarea',
+		'id' 			=> 'dl',
+		'title' 		=> __('Download URL', 'theme_admin'),
+		'description' 	=> __('link ดาวโหลด เอกสาร', 'theme_admin'),
+		'default' 		=> ''
+	),/*
+
 	array(
 		'type' 			=> 'text',
 		'id' 			=> 'budget',
@@ -39,6 +49,7 @@ $options = array(
 		'description' 	=> __('Leave it blank to disable this option.', 'theme_admin'),
 		'default' 		=> ''
 	),
+*/
 
 		
 	

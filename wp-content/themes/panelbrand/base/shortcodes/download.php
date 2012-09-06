@@ -36,8 +36,11 @@ function theme_shortcode_download($atts, $content = null, $code) {
 
 	// IDs
 	if( $ids ) $args['post__in'] = preg_split( '/,/', $ids );
-
+	
 	$downloads = get_posts( $args );
+	
+	$info_dl = get_post_meta($product->ID, 'info_dl', true);
+	
 	$list = '';
 	$titlelist = '<div class="titlelist titlelist-d">';
 	$counter = 0;
@@ -58,13 +61,13 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		if( $feature_image_url == '' ) $feature_image_url = THEME_URI . '/images/pattern/na.png';
 		
 		$resized_post_thumb_src = theme_get_image( $feature_image_url, true );
-		$titlelist	.='<span class="tilte'.$i.'"> <a href="#data'.$i.'" class="fancybox ">'.$title.'</a>   / </span>';
+		$titlelist	.='<span class="tilte'.$i.'"> <a href="'.$link.'" class="fancybox ">'.$title.'</a>   / </span>';
 		$list .='<div class="item download-item download-item'.$i.'">';
 		$list .='<a class="pic grayscale" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		$list .='<div class="info">';
 		$list .='<h3 class="title">'.$title.'</div>';
 		$list .='<div class="content">'.$content.'</div>';
-		$list .='<a class="readmore" href="'.$link.'">download.</a>';
+		$list .='<a href="'.$info_dl.'" target="_blank" class="readmore">download.</a>';
 
 		
 		$list .= '</div>';

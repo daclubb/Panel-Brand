@@ -88,6 +88,10 @@ a {
       
 	font-family: "DBHelvethaicaXThin";
       src: url("font/DBHelvethaicaX/Thin.ttf"); 
+      
+      font-family: "SuperstoreLight";
+      src: url("font/superstore/Light.ttf"); 
+
 
      /*
  font-family: "DBHelvethaicaXRegular";
@@ -155,11 +159,11 @@ body.blog {
 	background-size: 100%;
 }
 #tagline {
-	font-family: "DBHelvethaicaXThin"; 
+	font-family: "SuperstoreLight"; 
 	font-size: 55px;
 	background: url(images/threeline.png) no-repeat bottom;
-	padding:65px 0 15px 11px;
-	margin: 0 0 15px;
+	padding:57px 0 2px 0px;
+	margin: 0 0 19px;
 	line-height: 25px;
 	color: #1a1a1a;
 	
@@ -184,6 +188,7 @@ br {
 	color: black;
 	padding-left: 5px;
 }
+
 #lan {
 	margin: 0 5px 2px;
 }
@@ -196,9 +201,15 @@ br {
 
 
 #copyright {
-	line-height: 1.3;
+	line-height: 10px;
 	margin-left: 4px;
 }
+#head-foot #copyright p {
+	line-height: 10px!important;
+	padding: 0 0 2px!important;
+	margin: 0 0 7px;
+}
+
 
 /* !nav */
 .menu-item a {
@@ -254,7 +265,7 @@ br {
 	
 }
 #banner .text .title {
-	font-family: "DBHelvethaicaXThin"!Important; 
+	font-family: "SuperstoreLight"!Important; 
 	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
 	font-size: 50px;
 	line-height: 39px;
@@ -310,12 +321,12 @@ br {
 
 /* !Page  -----*/
 .entry-title {
-	font-family: "DBHelvethaicaXThin"!Important; 
-	font-size: 50px;
+	font-family: "CicleFina"!Important; 
+	font-size: 35px;
 	background: url(images/pagetitle-bg.png) repeat right center;
 	color: white;
 	display: inline-block;
-	padding: 3px 15px;
+	padding: 11px 15px;
 	margin: 0 0 15px;
 	position: relative;
 	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
@@ -362,7 +373,7 @@ color: #3b3b3b;
 .entry-content h2 {
 	
 	font-size: 29px!Important;
-
+/* font-family: "SuperstoreLight"!Important;  */
 }
 .entry-content h3 {
 	font-size: 25px!Important;
@@ -441,7 +452,7 @@ p {
 .product-info .title {
 	font-size: 30px;
 	line-height: 33px;
-	font-family: "DBHelvethaicaXThin"!important;
+	font-family: "SuperstoreLight"!important;
 	
 }
 
@@ -495,6 +506,12 @@ p {
 	margin-bottom: 20px;
 	float: left;
 	min-height: 300px;
+	position: relative;
+}
+.download-item .readmore {
+	position: absolute;
+	bottom:60px;
+	right:30px;
 }
 .story .pic ,.download-item .pic{
 	float: left;
@@ -508,13 +525,15 @@ p {
 
 .readmore {
 	display: inline-block;
-	background: url(images/readmore-bg.png) no-repeat;
+	background: url(images/readmore-bg.png);
 	width: 65px;
 	height: 12px;
 	color: white;
-	padding: 4px;
+	padding: 4px 4px 10px;
 	margin-top:20px;
 	font-size: 12px;
+	display: block;
+	text-align: center;
 
 }
 .readmore:hover {
@@ -556,4 +575,9 @@ p {
 .tilte5 {
 
 
+}
+
+.fancybox-inner .text h2 ,
+.fancybox-inner .text h3 {
+	margin-bottom: 20px;
 }

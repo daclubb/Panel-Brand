@@ -27,9 +27,9 @@ $options = array(
 	
 	array(
 		'type' 			=> 'textarea',
-		'id' 			=> 'popup_short_desc',
-		'title' 		=> __('Popup Short Description', 'theme_admin'),
-		'description' 	=> __('แสดงเมื่อ Product Popup ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
+		'id' 			=> 'dl',
+		'title' 		=> __('Download URL', 'theme_admin'),
+		'description' 	=> __('link ดาวโหลด เอกสาร', 'theme_admin'),
 		'default' 		=> ''
 	),
 	

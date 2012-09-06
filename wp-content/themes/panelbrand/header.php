@@ -178,7 +178,7 @@
 					</nav>				
 					<div id="copyright">
 						<p>Copyright © 2012 PANEL BRAND. </p>
-						<p>All Rights Reserved.</p>
+						<p>All Rights Reserved. Design by <a style="color:black;" href="http://www.builk.com">Builk Asia</a></p>
 					</div>
 				</div>	
 	</header><!-- #branding -->

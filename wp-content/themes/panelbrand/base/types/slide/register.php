@@ -5,7 +5,7 @@ function register_slide_type() {
 	register_post_type( 'slide',
 		array(
 				'labels' 				=> array(
-				'name' 					=> __('Slides', 'theme_admin' ),
+				'name' 					=> __('SLIDES', 'theme_admin' ),
 				'singular_name' 		=> __('Slide', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New Slide', 'theme_admin' ),
