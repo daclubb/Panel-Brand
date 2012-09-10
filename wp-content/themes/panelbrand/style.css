@@ -532,7 +532,8 @@ p {
 .story1 {
 	border-top: 0;
 	background: url(images/top-story-bg.png) repeat-x center top;
-	padding-top: 12px
+	padding-top: 12px;
+	margin: 22px 0 0;
 }
 .story .readmore {
 	position: absolute;
@@ -577,6 +578,8 @@ p {
 }
 .fancybox-wrap .readmore {
 	padding: 4px;
+	float: left;
+	margin: 0 10px 0 0;
 }
 .readmore:hover {
 	color: black;
@@ -641,4 +644,48 @@ p {
 #copyright {
 	clear: both;
 	margin-top: 5px;
+}
+
+
+/* Contact form */
+.wpcf7 {
+	width:700px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding:20px 0px!important;
+	margin: 40px 0;
+	
+}
+.wpcf7 span {
+	display: inline-block;
+	width:600px;
+}
+.wpcf7 label {
+	float: left;
+	width:100px;
+	margin-right: 10px;
+	text-align: right;
+}
+.wpcf7 label+span {
+	width:400px;
+}
+.wpcf7 textarea {
+	display: inline-block;
+	border-left:#FC3844 solid 5px; 
+	width: 
+}
+.wpcf7 input[type="submit"] {
+	margin-left: 110px;
+	background-color: #393;
+	background-image: url('/Content/Style/images/arrow.PNG');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	padding: 10px;
+	border: 0;
+	font-size: 14px;
+	font-weight: bold;
+	outline: 0;
+	color: white;
+	opacity: 0.9;
+	cursor: pointer;
 }

@@ -69,7 +69,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 	$img_slide_animate_speed = theme_options( 'portfolio', 'img_slide_animate_speed' ) * 1000;
 	
 	
- 	        	  
+ 	$contactlink = get_permalink(10);     	  
 	        	    
 	
 	// General App Option
@@ -84,6 +84,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 	$product_category = wp_get_post_terms($product->ID, 'portfolio_category', array("fields" => "names"));
 	$info_short_desc = get_post_meta($product->ID, 'info_short_desc', true);
 	$info_dl = get_post_meta($product->ID, 'info_dl', true);
+	
 	$info_product_code = get_post_meta($product->ID, 'info_product_code', true);
 	$info_product_size = get_post_meta($product->ID, 'info_product_size', true);
 	
@@ -130,7 +131,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 
 		 if( is_array( $appearance_slide_images ) )
 	        	        foreach( $appearance_slide_images as $image ) {
-	        	        	        	        	$resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
+	        	        $resized_image_src = theme_get_image( $image, $s_width, $s_height, true );
 	     $list .= '<img src='.$resized_image_src.' />';   	
 	       
 	     } 
@@ -143,8 +144,11 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		
 	    $list .= '<div class="text">'.$fullcontent;
 		if($info_dl) {
-		 $list .= '<a href="'.$info_dl.'" target="_blank" class="readmore">Detail</a>';
+		$resized_file_src = theme_get_image( $info_dl, '', '', true );
+		 $list .= '<a href="'.$resized_file_src.'" target="_blank" class="readmore">Detail</a>';
 		}
+
+		$list .='<a href="'.$contactlink.'" class="readmore">Contact Us</a>';
 		$list .= '</div>';
 		$list .= '</div>';
 		$list .= '</div>';

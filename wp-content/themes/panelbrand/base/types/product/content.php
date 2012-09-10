@@ -24,14 +24,15 @@ $options = array(
 		'description' 	=> __('คำอธิบายสั้นๆ แสดงเมื่อ Mouse over รูป Product ไม่ควรเกิน 140 ตัวอักษร', 'theme_admin'),
 		'default' 		=> ''
 	),
-	
 	array(
-		'type' 			=> 'textarea',
-		'id' 			=> 'dl',
-		'title' 		=> __('Download URL', 'theme_admin'),
-		'description' 	=> __('link ดาวโหลด เอกสาร', 'theme_admin'),
+		'type' 			=> 'image',
+		'id' 			=> 'dl',		
+		'title' 		=> __('Upload file', 'theme_admin'),
+		'description' 	=> 'อัพโหลดไฟล์เอกสารรายละเอียดสินค้า',
 		'default' 		=> ''
 	),
+	
+	
 	
 	array(
 		'type' 			=> 'text',

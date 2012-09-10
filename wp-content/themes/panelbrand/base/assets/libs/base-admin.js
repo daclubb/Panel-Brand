@@ -102,7 +102,7 @@ jQuery(document).ready(function($) {
 		    }
 		});
 	});
-	
+	 
 	$('.upload-image-bt-box').each(function(){
 		var cur_item = $(this);
 		var cur_parent = $(cur_item).parents('.input-field');
@@ -113,13 +113,13 @@ jQuery(document).ready(function($) {
 		    params : {
 		    	action: 'theme_ajax_action',
 		    	method: 'upload_file',
-		    	allowedExtensions: ['jpg', 'jpeg', 'gif', 'png'],
+		    	allowedExtensions: ['jpg', 'jpeg', 'gif', 'png' ,'pdf' ,'doc'],
 		    	post_id: ( typeof $('#post_ID').attr('value') != 'undefined' ) ? $('#post_ID').attr('value') : '0'
 		    },
 		    multiple : false,
 		    template: '<div class="qq-uploader">' +
 		                  '<div class="qq-upload-drop-area"><span>Drop files here to upload</span></div>' +
-		                  '<div class="qq-upload-button">Upload an Image</div>' +
+		                  '<div class="qq-upload-button">Upload file</div>' +
 		                  '<ul class="qq-upload-list"></ul>' +
 		              '</div>',
 		    onSubmit: function(id, fileName){
@@ -147,7 +147,7 @@ jQuery(document).ready(function($) {
 		    params : {
 		    	action: 'theme_ajax_action',
 		    	method: 'upload_file',
-		    	allowedExtensions: ['jpg', 'jpeg', 'gif', 'png'],
+		    	allowedExtensions: ['jpg', 'jpeg', 'gif', 'png' , 'pdf'],
 		    	post_id: ( typeof $('#post_ID').attr('value') != 'undefined' ) ? $('#post_ID').attr('value') : '0'
 		    },
 		    multiple : true,
