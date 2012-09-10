@@ -19,7 +19,8 @@
 <html id="ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+
+<html <?php language_attributes(); ?> class="<?php echo $lang; ?>">
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -141,6 +142,8 @@
 			$('.entry-title').append("<div class='right-corner' />");
 			$('.tilte4').after("<br />")
 			
+			$('.qtrans_language_chooser li:first-child a').after("<span style='float:left;margin:3px 4px;'>/</span>");
+			
 		});
 	</script>
 <?php if(is_home()) { /*  Add .home to body  */ ?>
@@ -149,8 +152,24 @@
 		$('body').addClass("home ") ;
 		
 	});
+	
+	
  </script>	
 <?php }?>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17939604-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -174,7 +193,8 @@
 			</nav><!-- #access -->
 				<div id="head-foot">
 					<nav id="lan">
-						<p><a class="current" href="#">TH</a> / <a href="#">EN</a>	</p>
+					
+						<!-- <p><a class="current" href="#">TH</a> / <a href="#">EN</a>	</p> -->
 					</nav>				
 					<div id="copyright">
 						<p>Copyright © 2012 PANEL BRAND. </p>

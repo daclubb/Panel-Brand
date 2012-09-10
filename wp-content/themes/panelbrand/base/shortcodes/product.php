@@ -93,8 +93,8 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$clear = ( $counter % 4 == 0 ) ? '<div class="clear"></div>' : '';
 		
 	
-		$title = $product->post_title;
-		$fullcontent = $product->post_content;
+		$title = apply_filters('the_title', $product->post_title);
+		$fullcontent = apply_filters('the_content', $product->post_content);
 		$product_category = wp_get_post_terms( $product->ID, 'product_category', array("fields" => "names" ));
 		$link = get_permalink( $product->ID );
 		
@@ -126,7 +126,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 		$list .= '</div>';
 		$list .= '<div id="data'.$i.'" class="data"  style="width:965px;height:450px;display: none;">';
 		$list .=  '<div class="slider-wraper">';
-		$list .=  '<ul class="slides-indetail">';
+		$list .=  '<div class="slides-indetail">';
 
 		 if( is_array( $appearance_slide_images ) )
 	        	        foreach( $appearance_slide_images as $image ) {
@@ -135,7 +135,7 @@ function theme_shortcode_product($atts, $content = null, $code) {
 	       
 	     } 
 	     
-	    $list .= '</ul>';
+	    $list .= '</div>';
 	    
 		
 		

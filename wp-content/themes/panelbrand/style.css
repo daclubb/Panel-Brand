@@ -86,11 +86,16 @@ a {
       src: url("font/DBHelvethaicaX/ThinExt.ttf"); 
 */
       
-	font-family: "DBHelvethaicaXThin";
-      src: url("font/DBHelvethaicaX/Thin.ttf"); 
+	/*
+font-family: "DBHelvethaicaXThin";
+      src: url("font/DBHelvethaicaX/Thin.ttf");
+*/ 
       
       font-family: "SuperstoreLight";
-      src: url("font/superstore/Light.ttf"); 
+      src: url("font/DBHelvethaicaX/regular.ttf"); 
+      
+
+
 
 
      /*
@@ -108,12 +113,20 @@ a {
       font-family: "CicleFina";
       src: url("font/Cicle_Fina.ttf");
       
-       font-family: "CicleSemi";
-      src: url("font/Cicle_Semi.ttf");  
-*/
-       
+       font-family: "CicleSemi"!Important;
+      src: url("font/Cicle_Semi.ttf");   
       
+      
+*/
+      
+    } 
+    @font-face {
+	  font-family: "CicleFina";
+      src: url("font/Cicle_Fina.ttf");
+
     }
+    
+    
     
 /* !Structure -----*/
 body {background: url(images/bg.png);
@@ -177,7 +190,7 @@ br {
 	
 }
 .en #tagline {
-	font-family: "CicleSemi"; 
+	font-family: "CicleSemi"!Important; 
 	font-size: 36px;}
 
 #head-foot {
@@ -214,14 +227,15 @@ br {
 /* !nav */
 .menu-item a {
 	display: block;
-	font-family: "CicleFina"!Important; 
+	font-family: CicleFina!Important; 
 	font-size: 24px;	
 	color: #1a1a1a;
 	text-decoration: none;
 	padding-left: 12px;
 	margin: 0 0 9px;
 	line-height: 0.7;
-
+	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
+	
 }
 /*bytype*/
 .product #menu-item-175 a,
@@ -255,6 +269,10 @@ br {
 	top: 450px;
 	
 }
+.en #banner .text  {
+	background: black;
+	color: white;
+}
 #banner .item {
 	width:100%!Important;
 	height: auto!Important; 
@@ -276,11 +294,12 @@ br {
 }
 
 .en #banner .text .title{
-	font-family: "CicleSemi"; 
+	font-family: "CicleSemi"!Important; 
 	font-size: 36px;
 	line-height: 29px;
 	padding: 20px 45px 8px 45px;
 	letter-spacing: +0.5mm;
+	color:white;
 
 
 }
@@ -355,41 +374,52 @@ br {
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 {
-	/*
-font-family: "DBHelvethaicaXThin"!important;
+.entry-content h6 ,
+.story h1,
+.story h2,
+.story h3,
+.story h4,
+.story h5,
+.story h6 {
+	
+font-family: "SuperstoreLight"!important;
 	color: #1a1a1a;
 	text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px;
 	margin: 0 0 10px;
-*/
-line-height:1.5;
-color: #3b3b3b;
-	margin: 0 0 15px;
+line-height:1;
+
+	margin: 0 0 0.2em;
 }
-.entry-content h1 {
-	font-size: 32px!Important;
+.entry-content h1 ,
+.story h1 {
+	font-size: 60px!Important;
 
 }
-.entry-content h2 {
+.entry-content h2,
+.story h2 {
 	
-	font-size: 29px!Important;
+	font-size: 55px!Important;
 /* font-family: "SuperstoreLight"!Important;  */
 }
-.entry-content h3 {
-	font-size: 25px!Important;
+.entry-content h3 ,
+.story h3{
+	font-size: 40px!Important;
 
 }
-.entry-content h4 {	
+.entry-content h4 ,
+.story h4{	
 
-	font-size: 20px!Important;	
+	font-size: 35px!Important;	
 }
-.entry-content h5 {	
+.entry-content h5,
+.story h5 {	
 	margin: 0px;
-	font-size: 17px!Important;	
+	font-size: 30px!Important;	
 }
-.entry-content h6{	
+.entry-content h6,
+.story h6{	
 	margin: 0px;
-	font-size: 15px!Important;	
+	font-size: 25px!Important;	
 }
 
 .en .entry-content h2,.en .entry-content h3 {
@@ -412,7 +442,7 @@ p {
 	margin: 0 0 10px
 }
 .entry-content {
-	font-size: 14px;
+	font-size: 15px;
 	color: #555;
 }
 
@@ -474,8 +504,12 @@ p {
 	padding-top: 0;
 	background: url(images/titlelist-bg.png);
 	margin-bottom: 5px;
+	margin-top:30px;
 }
 .titlelist a {padding: 0  5px ;margin:9px 5px 4px;display: inline-block;}
+.titlelist a  p{
+	
+}
 .titlelist a:hover {
 	color: #777!important;
 	background: url(images/current-arrow.png) no-repeat left bottom;
@@ -493,12 +527,17 @@ p {
 	border-top: #fff 1px solid ;
 	min-height: 240px;
 	padding:30px 0 ;
-	
+	position: relative;
 }
 .story1 {
 	border-top: 0;
 	background: url(images/top-story-bg.png) repeat-x center top;
 	padding-top: 12px
+}
+.story .readmore {
+	position: absolute;
+	right:20px;
+	bottom:40px;
 }
 .download-item {
 	width:48%;
@@ -529,12 +568,15 @@ p {
 	width: 65px;
 	height: 12px;
 	color: white;
-	padding: 4px 4px 10px;
+	padding: 4px 4px 11px;
 	margin-top:20px;
 	font-size: 12px;
 	display: block;
 	text-align: center;
 
+}
+.fancybox-wrap .readmore {
+	padding: 4px;
 }
 .readmore:hover {
 	color: black;
@@ -551,6 +593,7 @@ p {
 .fancybox-skin {
 	padding:0!important;
 }
+.fancybox-inner {overflow:visible!important;}
 .slides img {width: auto!Important;height: auto!important}
 .slider-wraper {
 	float: left;
@@ -565,11 +608,11 @@ p {
 	padding:20px;
 }
 
-#page-slide  {background: url(images/top-story-bg.png) repeat-x center top;padding-top:12px;min-height: 300px;}
+#page-slide  {background: url(images/top-story-bg.png) repeat-x center top;padding-top:12px;min-height: 300px;margin-bottom: 20px;}
 #page-slide img {width: 100%!Important;}
 
 .entry-content>p {
-	width:60%;
+	/* width:60%; */
 }
 
 .tilte5 {
@@ -580,4 +623,22 @@ p {
 .fancybox-inner .text h2 ,
 .fancybox-inner .text h3 {
 	margin-bottom: 20px;
+}
+
+.qtrans_language_chooser li a {
+	background: 0!important;
+	float:left;
+	margin:3px 0 ;
+	padding: 0;
+}
+.qtrans_language_chooser li a span {
+	padding: 0;
+	margin: 0;
+}
+#lan .qtrans_language_chooser li.active a {
+	color: red;
+}
+#copyright {
+	clear: both;
+	margin-top: 5px;
 }

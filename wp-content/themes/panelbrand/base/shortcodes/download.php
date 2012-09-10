@@ -48,7 +48,7 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		$i++;
 		$last = ( ++$counter % 2 == 0 ) ? 'last' : '';
 		$clear = ( $counter % 2 == 0 ) ? '<div class="clear"></div>' : '';
-		
+		$info_dl = get_post_meta($download->ID, 'info_dl', true);
 		$title = $download->post_title;
 		$content = $download->post_content;
 		$download_category = wp_get_post_terms( $download->ID, 'download_category', array("fields" => "names" ));

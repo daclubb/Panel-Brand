@@ -6,7 +6,7 @@ function register_download_custom_post_type() {
 		array(
 			'labels' => array(
 				'name' 					=> __( 'DOWNLOAD', 'theme_admin' ),
-				'singular_name' 		=> __('download', 'theme_admin' ),
+				'singular_name' 		=> __('Download', 'theme_admin' ),
 				'add_new' 				=> __('Add New', 'theme_admin' ),
 				'add_new_item' 			=> __('Add New download', 'theme_admin' ),
 				'edit_item' 			=> __('Edit download', 'theme_admin' ),
