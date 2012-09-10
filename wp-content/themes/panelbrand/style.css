@@ -686,6 +686,11 @@ p {
 	font-weight: bold;
 	outline: 0;
 	color: white;
-	opacity: 0.9;
+	opacity: 0.8;
 	cursor: pointer;
+}
+.wpcf7 input[type="submit"]:hover {
+	opacity: 1;
+	transition:all ease 0.3s;
+	
 }
