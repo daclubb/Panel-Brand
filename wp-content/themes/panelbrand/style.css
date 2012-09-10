@@ -671,8 +671,15 @@ p {
 }
 .wpcf7 textarea {
 	display: inline-block;
+	border: 0;
 	border-left:#FC3844 solid 5px; 
-	width: 
+	
+
+}
+.wpcf7 input[type="text"]:focus,
+.wpcf7 textarea:focus {
+	background: #f7f898;
+	/* box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1) ; */
 }
 .wpcf7 input[type="submit"] {
 	margin-left: 110px;

@@ -81,6 +81,7 @@ global $more; $more = 0;
 
 		
 	}
+	
 	return <<<RET
 $list
 RET;

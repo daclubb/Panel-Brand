@@ -4,7 +4,7 @@
 add_shortcode('download', 'theme_shortcode_download');
 function theme_shortcode_download($atts, $content = null, $code) {
 	extract(shortcode_atts(array(
-		'count' => '100',
+		'count' => '300',
 		'featured'	=> false,
 		'cats'		=> false,
 		'ids'		=> false
@@ -81,6 +81,9 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		$list .= $clear;
 		
 	}
+ 	
+	
+	
 	$titlelist	.='</div>';
 	return <<<RET
 	$titlelist	
