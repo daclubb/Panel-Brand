@@ -51,6 +51,11 @@ function theme_shortcode_download($atts, $content = null, $code) {
 		$info_dl = get_post_meta($download->ID, 'info_dl', true);
 		$title = $download->post_title;
 		$content = $download->post_content;
+		$morestring = '<!--more-->';
+		$explodemore = explode($morestring, $download->post_content);
+		$beforemore = $explodemore[0]; // before the more-tag
+		$aftermore = $explodemore[1]; // after the more-tag
+		
 		$download_category = wp_get_post_terms( $download->ID, 'download_category', array("fields" => "names" ));
 		$link = get_permalink( $download->ID );
 		

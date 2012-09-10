@@ -40,13 +40,23 @@ function theme_shortcode_portfolio($atts, $content = null, $code) {
 	$portfolios = get_posts( $args );
 	$list = '';
 	$counter = 0;
+	
 	foreach ( $portfolios as $portfolio ) {
-
+global $more; $more = 0; 
 		$last = ( ++$counter % 1 == 0 ) ? 'last' : '';
 		$clear = ( $counter % 1 == 0 ) ? '<div class="clear"></div>' : '';
 		$i++;
-		$title = $portfolio->post_title;
-		$content = $portfolio->post_content;
+		$title = apply_filters('the_title', $portfolio->post_title);
+		$fullcontent = apply_filters('the_content', $portfolio->post_content);
+		
+		$morestring = '<!--more-->';
+		$explodemore = explode($morestring, $portfolio->post_content);
+		$beforemore = $explodemore[0]; // before the more-tag
+		$aftermore = $explodemore[1]; // after the more-tag
+		
+
+
+
 		$portfolio_category = wp_get_post_terms( $portfolio->ID, 'portfolio_category', array("fields" => "names" ));
 		$link = get_permalink( $portfolio->ID );
 		
@@ -62,7 +72,7 @@ function theme_shortcode_portfolio($atts, $content = null, $code) {
 		$list .='<a class="pic" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		$list .='<div class="info">';
 		$list .='<h3 class="title">'.$title.'</div>';
-		$list .='<div class="content">'.$content.'</div>';
+		$list .='<div class="content">'.$beforemore.'</div>';
 		$list .='<a class="readmore" href="'.$link.'">Read more.</a>';
 
 		

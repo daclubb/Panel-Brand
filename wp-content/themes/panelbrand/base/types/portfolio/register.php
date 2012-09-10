@@ -26,7 +26,7 @@ function register_portfolio_custom_post_type() {
 			'rewrite' 				=> array( 'with_front' => false, 'slug' => '/portfolio' ),
 			'query_var' 			=> 'portfolio',
 			'_builtin' 				=> false,
-			'supports' 				=> array('title', 'editor', 'thumbnail'),
+			'supports' 				=> array('title', 'editor', 'thumbnail' ,'excerpt'),
 			'show_in_menu' 			=> true,
 			'has_archive'			=> false,
 			'menu_position'			=> 1002,

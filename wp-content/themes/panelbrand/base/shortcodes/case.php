@@ -47,6 +47,12 @@ function theme_shortcode_case($atts, $content = null, $code) {
 		$i++;
 		$title = $case->post_title;
 		$content = $case->post_content;
+		
+		$morestring = '<!--more-->';
+		$explodemore = explode($morestring, $case->post_content);
+		$beforemore = $explodemore[0]; // before the more-tag
+		$aftermore = $explodemore[1]; // after the more-tag
+		
 		$case_category = wp_get_post_terms( $case->ID, 'case_category', array("fields" => "names" ));
 		$link = get_permalink( $case->ID );
 		
@@ -62,7 +68,7 @@ function theme_shortcode_case($atts, $content = null, $code) {
 		$list .='<a class="pic" href="'.$link.'"><img src="'.$resized_post_thumb_src.'" alt="'.$title.'" title="'.$title.'" rel="tip" /></a>';
 		$list .='<div class="info">';
 		$list .='<h3 class="title">'.$title.'</div>';
-		$list .='<div class="content">'.$content.'</div>';
+		$list .='<div class="content">'.$beforemore.'</div>';
 		$list .='<a class="readmore" href="'.$link.'">Read more.</a>';
 
 		
